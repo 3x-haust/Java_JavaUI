@@ -1,0 +1,3 @@
+/Users/bagjun-won/Java_JavaUI/build-native/CMakeFiles/jui_engine.dir
+/Users/bagjun-won/Java_JavaUI/build-native/CMakeFiles/edit_cache.dir
+/Users/bagjun-won/Java_JavaUI/build-native/CMakeFiles/rebuild_cache.dir

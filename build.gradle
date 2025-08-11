@@ -63,6 +63,28 @@ tasks.register('runFx', JavaExec) {
     }
 }
 
+// -------- Native Engine build & demo --------
+tasks.register('engineBuild', Exec) {
+    group = 'engine'
+    description = 'Build native engine via CMake (outputs build-native/libjui_engine.*)'
+    commandLine 'bash', '-lc', 'cmake -S . -B build-native && cmake --build build-native -j 8'
+}
+
+tasks.register('runEngineDemo', JavaExec) {
+    group = 'engine'
+    description = 'Run IR→Engine demo (requires native engine built)'
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'io.github._3xhaust.core.demo.EngineDemo'
+    dependsOn 'classes'
+    doFirst {
+        def lib = new File(project.projectDir, 'build-native/libjui_engine.dylib')
+        if (!lib.exists()) {
+            logger.lifecycle("Native engine not found. Building it now...")
+        }
+    }
+    jvmArgs "-Djui.engine.lib=${project.projectDir}/build-native/libjui_engine.dylib"
+}
+
 // Allow overriding GluonFX target via -Pgluonfx.target=android (or ios-sim/ios)
 def gfxtarget = project.findProperty('gluonfx.target') ?: 'ios-sim'
 

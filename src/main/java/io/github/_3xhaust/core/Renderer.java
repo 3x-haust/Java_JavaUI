@@ -8,7 +8,7 @@ import io.github._3xhaust.state.State;
  * Platform-neutral renderer API. Each backend (Swing, JavaFX, Android, iOS) maps these calls to
  * native UI constructs.
  */
-public interface Renderer {
+ public interface Renderer {
     // Lifecycle
     void init(String title, int width, int height);
     void mount(View root);

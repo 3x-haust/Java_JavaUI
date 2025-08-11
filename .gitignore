@@ -2,6 +2,9 @@
 /build/
 /.gradle/
 
+# Project docs (local only)
+trd.md
+
 # IDE
 /.idea/
 *.iml
