@@ -1,5 +1,7 @@
 plugins {
     id 'java'
+    id 'application'
+    id 'com.gluonhq.gluonfx-gradle-plugin' version '1.0.27'
 }
 
 group = 'io.github._3xhaust'
@@ -7,6 +9,12 @@ version = '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
 }
 
 dependencies {
@@ -18,9 +26,81 @@ dependencies {
 
     testImplementation 'org.projectlombok:lombok:1.18.38'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.38'
+
+    def javafxVersion = '21.0.3'
+    def os = org.gradle.internal.os.OperatingSystem.current()
+    def arch = System.getProperty('os.arch')
+    def PLATFORM = (os.isMacOsX() ? (arch.contains('aarch64') || arch.contains('arm') ? 'mac-aarch64' : 'mac')
+            : os.isWindows() ? (arch.contains('64') ? 'win' : 'win-x86')
+            : os.isLinux() ? (arch.contains('aarch64') || arch.contains('arm') ? 'linux-aarch64' : 'linux')
+            : '')
+
+    implementation "org.openjfx:javafx-base:${javafxVersion}:${PLATFORM}"
+    implementation "org.openjfx:javafx-graphics:${javafxVersion}:${PLATFORM}"
+    implementation "org.openjfx:javafx-controls:${javafxVersion}:${PLATFORM}"
 }
 
 
 test {
     useJUnitPlatform()
+}
+
+application {
+    // 기본 실행 엔트리(JavaFX) - Gluon iOS 빌드에서도 사용됨
+    mainClass = 'examples.hello_world.FXApp'
+}
+
+tasks.register('runFx', JavaExec) {
+    group = 'application'
+    description = 'Run JavaFX example'
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'examples.hello_world.FXApp'
+    // Use JavaFX modules from runtimeClasspath as module-path
+    doFirst {
+        jvmArgs '--module-path', configurations.runtimeClasspath.asPath,
+                '--add-modules', 'javafx.controls,javafx.graphics'
+    }
+}
+
+gluonfx {
+    target = 'ios-sim'
+    mainClassName = 'examples.hello_world.FXApp'
+}
+
+// ---------- iOS Shortcuts ----------
+tasks.register('iosBuild') {
+    group = 'GluonFX'
+    description = 'Build iOS native image and package the .app bundle'
+    dependsOn 'nativeBuild', 'nativePackage'
+}
+
+tasks.register('iosInstall') {
+    group = 'GluonFX'
+    description = 'Install the .app bundle to the booted iOS Simulator'
+    dependsOn 'nativeInstall'
+}
+
+tasks.register('iosRun') {
+    group = 'GluonFX'
+    description = 'Run the app on the booted iOS Simulator'
+    dependsOn 'nativeRun'
+}
+
+tasks.register('ios') {
+    group = 'GluonFX'
+    description = 'One-shot: build + package + install + run on iOS Simulator'
+    dependsOn 'iosBuild', 'iosInstall', 'iosRun'
+}
+
+// Optional helpers (no rebuild): fast relaunch/open
+tasks.register('iosOpen', Exec) {
+    group = 'GluonFX'
+    description = 'Open iOS Simulator app'
+    commandLine 'open', '-a', 'Simulator'
+}
+
+tasks.register('iosLaunch', Exec) {
+    group = 'GluonFX'
+    description = 'Launch installed app on the booted simulator (no rebuild)'
+    commandLine 'xcrun', 'simctl', 'launch', 'booted', 'io.github._3xhaust.javaUI'
 }

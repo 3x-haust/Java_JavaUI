@@ -22,4 +22,9 @@ public class App {
         renderer.init(title, width, height);
         SwingUtilities.invokeLater(() -> renderer.mount(view));
     }
+
+    public static void run(Renderer renderer, String title, int width, int height, View view) {
+        renderer.init(title, width, height);
+        renderer.mount(view);
+    }
 }

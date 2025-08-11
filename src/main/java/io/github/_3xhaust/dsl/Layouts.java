@@ -1,14 +1,12 @@
 package io.github._3xhaust.dsl;
 
+import io.github._3xhaust.core.Insets;
 import io.github._3xhaust.core.Renderer;
 import io.github._3xhaust.core.View;
-import io.github._3xhaust.dsl.enums.MainAxisAlignment;
 import io.github._3xhaust.dsl.enums.CrossAxisAlignment;
+import io.github._3xhaust.dsl.enums.MainAxisAlignment;
 import io.github._3xhaust.dsl.enums.MainAxisSize;
-import io.github._3xhaust.platform.swing.SwingRenderer;
 
-import javax.swing.*;
-import java.awt.*;
 import java.util.Arrays;
 import java.util.List;
 
@@ -77,12 +75,12 @@ public class Layouts {
         }
 
         public ColumnWidget padding(int all) {
-            this.padding = new Insets(all, all, all, all);
+            this.padding = Insets.all(all);
             return this;
         }
 
         public ColumnWidget padding(int vertical, int horizontal) {
-            this.padding = new Insets(vertical, horizontal, vertical, horizontal);
+            this.padding = Insets.verticalHorizontal(vertical, horizontal);
             return this;
         }
 
@@ -93,107 +91,11 @@ public class Layouts {
 
         @Override
         public void render(Renderer renderer) {
-            if (renderer instanceof SwingRenderer swing) {
-                JPanel panel = createColumnPanel();
-
-                if (padding != null) {
-                    panel.setBorder(BorderFactory.createEmptyBorder(
-                        padding.top, padding.left, padding.bottom, padding.right));
-                }
-
-                swing.pushContainer(panel);
-
-                addMainAxisSpacing(panel, true);
-
-                for (int i = 0; i < children.size(); i++) {
-                    if (crossAxisAlignment != CrossAxisAlignment.STRETCH) {
-                        JPanel wrapper = createCrossAxisWrapper();
-                        swing.pushContainer(wrapper);
-                        children.get(i).render(renderer);
-                        swing.popContainer();
-
-                        // crossAxisAlignment에 따라 추가 glue 처리
-                        switch (crossAxisAlignment) {
-                            case START -> {
-                                // START: 왼쪽 정렬이므로 오른쪽에 glue 추가
-                                wrapper.add(Box.createHorizontalGlue());
-                            }
-                            case CENTER -> {
-                                wrapper.add(Box.createHorizontalGlue());
-                            }
-                            case END -> {
-                                // END: 오른쪽 정렬이므로 이미 createCrossAxisWrapper에서 처리됨
-                            }
-                        }
-
-                        panel.add(wrapper);
-                    } else {
-                        children.get(i).render(renderer);
-                    }
-
-                    if (i < children.size() - 1) {
-                        if (gap > 0) {
-                            panel.add(Box.createVerticalStrut(gap));
-                        }
-                        addMainAxisSpacing(panel, false);
-                    }
-                }
-
-                addMainAxisSpacing(panel, true);
-
-                swing.popContainer();
-                swing.addComponent(panel);
+            renderer.pushColumn(mainAxisAlignment, crossAxisAlignment, padding, gap);
+            for (View child : children) {
+                child.render(renderer);
             }
-        }
-
-        private JPanel createColumnPanel() {
-            JPanel panel = new JPanel();
-            panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
-
-            return panel;
-        }
-
-        private void addMainAxisSpacing(JPanel panel, boolean isEdge) {
-            switch (mainAxisAlignment) {
-                case CENTER -> {
-                    if (isEdge) panel.add(Box.createVerticalGlue());
-                }
-                case END -> {
-                    if (isEdge && panel.getComponentCount() == 0) {
-                        panel.add(Box.createVerticalGlue());
-                    }
-                }
-                case SPACE_BETWEEN -> {
-                    if (!isEdge && panel.getComponentCount() > 0) {
-                        panel.add(Box.createVerticalGlue());
-                    }
-                }
-                case SPACE_AROUND -> panel.add(Box.createVerticalGlue());
-                case SPACE_EVENLY -> panel.add(Box.createVerticalGlue());
-            }
-        }
-
-        private JPanel createCrossAxisWrapper() {
-            JPanel wrapper = new JPanel();
-            wrapper.setOpaque(false);
-            wrapper.setLayout(new BoxLayout(wrapper, BoxLayout.X_AXIS));
-
-            switch (crossAxisAlignment) {
-                case START -> {
-                    // START의 경우 컴포넌��를 왼쪽에 배치하고 오른쪽에 여백을 추가
-                }
-                case END -> {
-                    wrapper.add(Box.createHorizontalGlue());
-                }
-                case CENTER -> {
-                    wrapper.add(Box.createHorizontalGlue());
-                }
-                default -> {
-                    wrapper.add(Box.createHorizontalGlue());
-                }
-            }
-
-            return wrapper;
+            renderer.pop();
         }
     }
 
@@ -225,12 +127,12 @@ public class Layouts {
         }
 
         public RowWidget padding(int all) {
-            this.padding = new Insets(all, all, all, all);
+            this.padding = Insets.all(all);
             return this;
         }
 
         public RowWidget padding(int vertical, int horizontal) {
-            this.padding = new Insets(vertical, horizontal, vertical, horizontal);
+            this.padding = Insets.verticalHorizontal(vertical, horizontal);
             return this;
         }
 
@@ -241,68 +143,11 @@ public class Layouts {
 
         @Override
         public void render(Renderer renderer) {
-            if (renderer instanceof SwingRenderer swing) {
-                JPanel panel = createRowPanel();
-
-                if (padding != null) {
-                    panel.setBorder(BorderFactory.createEmptyBorder(
-                        padding.top, padding.left, padding.bottom, padding.right));
-                }
-
-                swing.pushContainer(panel);
-
-                addMainAxisSpacing(panel, true);
-
-                for (int i = 0; i < children.size(); i++) {
-                    children.get(i).render(renderer);
-
-                    if (i < children.size() - 1) {
-                        if (gap > 0) {
-                            panel.add(Box.createHorizontalStrut(gap));
-                        }
-                        addMainAxisSpacing(panel, false);
-                    }
-                }
-
-                addMainAxisSpacing(panel, true);
-
-                swing.popContainer();
-                swing.addComponent(panel);
+            renderer.pushRow(mainAxisAlignment, crossAxisAlignment, padding, gap);
+            for (View child : children) {
+                child.render(renderer);
             }
-        }
-
-        private JPanel createRowPanel() {
-            JPanel panel = new JPanel();
-            panel.setLayout(new BoxLayout(panel, BoxLayout.X_AXIS));
-
-            switch (crossAxisAlignment) {
-                case START -> panel.setAlignmentY(Component.TOP_ALIGNMENT);
-                case END -> panel.setAlignmentY(Component.BOTTOM_ALIGNMENT);
-                case CENTER -> panel.setAlignmentY(Component.CENTER_ALIGNMENT);
-                case STRETCH -> panel.setAlignmentY(Component.CENTER_ALIGNMENT);
-            }
-
-            return panel;
-        }
-
-        private void addMainAxisSpacing(JPanel panel, boolean isEdge) {
-            switch (mainAxisAlignment) {
-                case CENTER -> {
-                    if (isEdge) panel.add(Box.createHorizontalGlue());
-                }
-                case END -> {
-                    if (isEdge && panel.getComponentCount() == 0) {
-                        panel.add(Box.createHorizontalGlue());
-                    }
-                }
-                case SPACE_BETWEEN -> {
-                    if (!isEdge && panel.getComponentCount() > 0) {
-                        panel.add(Box.createHorizontalGlue());
-                    }
-                }
-                case SPACE_AROUND -> panel.add(Box.createHorizontalGlue());
-                case SPACE_EVENLY -> panel.add(Box.createHorizontalGlue());
-            }
+            renderer.pop();
         }
     }
 
@@ -315,17 +160,9 @@ public class Layouts {
 
         @Override
         public void render(Renderer renderer) {
-            if (renderer instanceof SwingRenderer swing) {
-                JPanel panel = new JPanel(new GridBagLayout());
-                GridBagConstraints gbc = new GridBagConstraints();
-                gbc.anchor = GridBagConstraints.CENTER;
-
-                swing.pushContainer(panel);
-                child.render(renderer);
-                swing.popContainer();
-
-                swing.addComponent(panel);
-            }
+            renderer.pushCenter();
+            child.render(renderer);
+            renderer.pop();
         }
     }
 
@@ -348,20 +185,11 @@ public class Layouts {
 
         @Override
         public void render(Renderer renderer) {
-            if (renderer instanceof SwingRenderer swing) {
-                JPanel panel = new JPanel();
-                panel.setPreferredSize(new Dimension((int)width, (int)height));
-                panel.setMinimumSize(new Dimension((int)width, (int)height));
-                panel.setMaximumSize(new Dimension((int)width, (int)height));
-
-                if (child != null) {
-                    swing.pushContainer(panel);
-                    child.render(renderer);
-                    swing.popContainer();
-                }
-
-                swing.addComponent(panel);
+            renderer.pushSizedBox((int) width, (int) height);
+            if (child != null) {
+                child.render(renderer);
             }
+            renderer.pop();
         }
     }
 

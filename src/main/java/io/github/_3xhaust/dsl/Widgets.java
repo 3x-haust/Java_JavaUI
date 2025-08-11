@@ -1,10 +1,9 @@
 package io.github._3xhaust.dsl;
 
+import io.github._3xhaust.core.Renderer;
 import io.github._3xhaust.core.View;
-import io.github._3xhaust.platform.swing.SwingRenderer;
 import io.github._3xhaust.state.State;
 
-import javax.swing.*;
 import java.awt.*;
 
 public class Widgets {
@@ -95,20 +94,9 @@ public class Widgets {
             return this;
         }
 
-        public TextWidget alignCenter() {
-            this.textAlign = SwingConstants.CENTER;
-            return this;
-        }
-
-        public TextWidget alignLeft() {
-            this.textAlign = SwingConstants.LEFT;
-            return this;
-        }
-
-        public TextWidget alignRight() {
-            this.textAlign = SwingConstants.RIGHT;
-            return this;
-        }
+        public TextWidget alignCenter() { this.textAlign = 1; return this; }
+        public TextWidget alignLeft() { this.textAlign = 0; return this; }
+        public TextWidget alignRight() { this.textAlign = 2; return this; }
 
         public TextWidget padding(int all) {
             this.padding = new Insets(all, all, all, all);
@@ -131,53 +119,14 @@ public class Widgets {
         }
 
         @Override
-        public void render(io.github._3xhaust.core.Renderer renderer) {
-            if (renderer instanceof SwingRenderer swing) {
-                JLabel label;
-                if (state != null) {
-                    label = swing.label(state);
-                } else {
-                    label = swing.label(text);
-                }
-
-                applyModifiers(label);
-                swing.addComponent(label);
+        public void render(Renderer renderer) {
+            if (state != null) {
+                renderer.addText(state);
+            } else {
+                renderer.addText(text);
             }
         }
-
-        private void applyModifiers(JLabel label) {
-            if (font != null) {
-                label.setFont(font);
-            }
-            if (color != null) {
-                label.setForeground(color);
-            }
-            if (backgroundColor != null) {
-                label.setBackground(backgroundColor);
-                label.setOpaque(true);
-            }
-            if (textAlign != -1) {
-                label.setHorizontalAlignment(textAlign);
-            }
-            if (minSize != null) {
-                label.setMinimumSize(minSize);
-                label.setPreferredSize(minSize);
-            }
-            if (border != null) {
-                label.setBorder(BorderFactory.createLineBorder(border.color, border.width));
-            }
-            if (padding != null) {
-                javax.swing.border.Border currentBorder = label.getBorder();
-                javax.swing.border.Border paddingBorder = BorderFactory.createEmptyBorder(
-                    padding.top, padding.left, padding.bottom, padding.right
-                );
-                if (currentBorder != null) {
-                    label.setBorder(BorderFactory.createCompoundBorder(currentBorder, paddingBorder));
-                } else {
-                    label.setBorder(paddingBorder);
-                }
-            }
-        }
+        // 스타일은 플랫폼별 렌더러에서 적용 경로를 별도 제공하는 방향으로 이관 예정
     }
 
     public static class ButtonWidget implements View {
@@ -252,51 +201,10 @@ public class Widgets {
         }
 
         @Override
-        public void render(io.github._3xhaust.core.Renderer renderer) {
-            if (renderer instanceof SwingRenderer swing) {
-                JButton button;
-
-                switch (buttonType) {
-                    case "secondary" -> button = swing.secondaryButton(text, onClick);
-                    case "success" -> button = swing.successButton(text, onClick);
-                    case "danger" -> button = swing.dangerButton(text, onClick);
-                    case "warning" -> button = swing.warningButton(text, onClick);
-                    default -> button = swing.primaryButton(text, onClick);
-                }
-
-                applyModifiers(button);
-                swing.addComponent(button);
-            }
+        public void render(Renderer renderer) {
+            renderer.addButton(text, onClick);
         }
-
-        private void applyModifiers(JButton button) {
-            if (font != null) {
-                button.setFont(font);
-            }
-            if (color != null) {
-                button.setForeground(color);
-            }
-            if (backgroundColor != null) {
-                button.setBackground(backgroundColor);
-            }
-            if (preferredSize != null) {
-                button.setPreferredSize(preferredSize);
-            }
-            if (border != null) {
-                button.setBorder(BorderFactory.createLineBorder(border.color, border.width));
-            }
-            if (padding != null) {
-                javax.swing.border.Border currentBorder = button.getBorder();
-                javax.swing.border.Border paddingBorder = BorderFactory.createEmptyBorder(
-                    padding.top, padding.left, padding.bottom, padding.right
-                );
-                if (currentBorder != null) {
-                    button.setBorder(BorderFactory.createCompoundBorder(currentBorder, paddingBorder));
-                } else {
-                    button.setBorder(paddingBorder);
-                }
-            }
-        }
+        // 스타일은 플랫폼별 렌더러에서 적용 경로를 별도 제공하는 방향으로 이관 예정
     }
 
     private static class BorderInfo {
