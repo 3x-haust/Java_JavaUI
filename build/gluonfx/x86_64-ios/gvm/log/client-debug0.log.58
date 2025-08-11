@@ -1,0 +1,203 @@
+[화 8월 12 00:50:31 KST 2025][정보] ==================== COMPILE TASK ====================
+[화 8월 12 00:50:31 KST 2025][정보] We will now compile your code for x86_64-apple-ios. This may take some time.
+[화 8월 12 00:50:31 KST 2025][미세] Extracting native libs to: /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/gvm/lib
+[화 8월 12 00:50:31 KST 2025][미세] Extracting native libs from jar: /Users/bagjun-won/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.38/57f8f5e02e92a30fd21b80cbd426a4172b5f8e29/lombok-1.18.38.jar
+[화 8월 12 00:50:31 KST 2025][미세] Extracting native libs from jar: /Users/bagjun-won/.gluon/substrate/javafxStaticSdk/21-ea+11.2/ios-arm64/sdk/lib/javafx.controls.jar
+[화 8월 12 00:50:31 KST 2025][미세] Extracting native libs from jar: /Users/bagjun-won/.gluon/substrate/javafxStaticSdk/21-ea+11.2/ios-arm64/sdk/lib/javafx.graphics.jar
+[화 8월 12 00:50:31 KST 2025][미세] Extracting native libs from jar: /Users/bagjun-won/.gluon/substrate/javafxStaticSdk/21-ea+11.2/ios-arm64/sdk/lib/javafx.base.jar
+[화 8월 12 00:50:31 KST 2025][미세] Looking for resource: /native/ios/dummy.c
+[화 8월 12 00:50:31 KST 2025][미세] Looking for resource: /native/ios/AppDelegate.m
+[화 8월 12 00:50:31 KST 2025][미세] Looking for resource: /native/ios/JvmFuncsFallbacks.c
+[화 8월 12 00:50:31 KST 2025][미세] PB Command for compile-additional-sources: clang -c -DSUBSTRATE -xobjective-c -arch x86_64 -mios-version-min=11.0 -I/Users/bagjun-won/Graal/graalvm-svm-java17-darwin-gluon-22.1.0.1-Final/Contents/Home/include -I/Users/bagjun-won/Graal/graalvm-svm-java17-darwin-gluon-22.1.0.1-Final/Contents/Home/include/darwin -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.2.sdk -DGVM_IOS_SIM -DGVM_17 -I/Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/gvm/javaUI dummy.c AppDelegate.m JvmFuncsFallbacks.c
+[화 8월 12 00:50:31 KST 2025][미세] Start process compile-additional-sources...
+[화 8월 12 00:50:32 KST 2025][미세] [SUB] AppDelegate.m:57:12: warning: 'extern' variable has an initializer [-Wextern-initializer]
+[화 8월 12 00:50:32 KST 2025][미세] [SUB]    57 | extern int __svm_vm_is_static_binary __attribute__((weak)) = 1;
+[화 8월 12 00:50:32 KST 2025][미세] [SUB]       |            ^
+[화 8월 12 00:50:32 KST 2025][미세] [SUB] AppDelegate.m:109:57: warning: 'UILocalNotification' is deprecated: first deprecated in iOS 10.0 - Use UserNotifications Framework's UNNotificationRequest [-Wdeprecated-declarations]
+[화 8월 12 00:50:32 KST 2025][미세] [SUB]   109 |         if ([notifId isKindOfClass:[UILocalNotification class]]) {
+[화 8월 12 00:50:32 KST 2025][미세] [SUB]       |                                                         ^
+[화 8월 12 00:50:32 KST 2025][미세] [SUB] /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UILocalNotification.h:18:12: note: 'UILocalNotification' has been explicitly marked deprecated here
+[화 8월 12 00:50:32 KST 2025][미세] [SUB]    18 | @interface UILocalNotification : NSObject<NSCopying, NSCoding>
+[화 8월 12 00:50:32 KST 2025][미세] [SUB]       |            ^
+[화 8월 12 00:50:32 KST 2025][미세] [SUB] AppDelegate.m:110:13: warning: 'UILocalNotification' is deprecated: first deprecated in iOS 10.0 - Use UserNotifications Framework's UNNotificationRequest [-Wdeprecated-declarations]
+[화 8월 12 00:50:32 KST 2025][미세] [SUB]   110 |             UILocalNotification* notif = (UILocalNotification *)notifId;
+[화 8월 12 00:50:32 KST 2025][미세] [SUB]       |             ^
+[화 8월 12 00:50:32 KST 2025][미세] [SUB] /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UILocalNotification.h:18:12: note: 'UILocalNotification' has been explicitly marked deprecated here
+[화 8월 12 00:50:32 KST 2025][미세] [SUB]    18 | @interface UILocalNotification : NSObject<NSCopying, NSCoding>
+[화 8월 12 00:50:32 KST 2025][미세] [SUB]       |            ^
+[화 8월 12 00:50:32 KST 2025][미세] [SUB] AppDelegate.m:110:43: warning: 'UILocalNotification' is deprecated: first deprecated in iOS 10.0 - Use UserNotifications Framework's UNNotificationRequest [-Wdeprecated-declarations]
+[화 8월 12 00:50:32 KST 2025][미세] [SUB]   110 |             UILocalNotification* notif = (UILocalNotification *)notifId;
+[화 8월 12 00:50:32 KST 2025][미세] [SUB]       |                                           ^
+[화 8월 12 00:50:32 KST 2025][미세] [SUB] /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UILocalNotification.h:18:12: note: 'UILocalNotification' has been explicitly marked deprecated here
+[화 8월 12 00:50:32 KST 2025][미세] [SUB]    18 | @interface UILocalNotification : NSObject<NSCopying, NSCoding>
+[화 8월 12 00:50:32 KST 2025][미세] [SUB]       |            ^
+[화 8월 12 00:50:32 KST 2025][미세] [SUB] AppDelegate.m:193:27: warning: passing 'char **' to parameter of type 'const char **' discards qualifiers in nested pointer types [-Wincompatible-pointer-types-discards-qualifiers]
+[화 8월 12 00:50:32 KST 2025][미세] [SUB]   193 |     (*run_main)(argsSize, graalArgs);
+[화 8월 12 00:50:32 KST 2025][미세] [SUB]       |                           ^~~~~~~~~
+[화 8월 12 00:50:32 KST 2025][미세] [SUB] 5 warnings generated.
+[화 8월 12 00:50:32 KST 2025][미세] Result for compile-additional-sources: 0
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/core/View.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes9143426392468860725/io/github/_3xhaust/core/View.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/core/Launcher.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes9143426392468860725/io/github/_3xhaust/core/Launcher.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/core/App.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes9143426392468860725/io/github/_3xhaust/core/App.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/core/Insets.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes9143426392468860725/io/github/_3xhaust/core/Insets.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/core/Launcher$PlatformType.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes9143426392468860725/io/github/_3xhaust/core/Launcher$PlatformType.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/core/Renderer.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes9143426392468860725/io/github/_3xhaust/core/Renderer.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/platform/javafx/JavaFXRenderer$ContainerContext.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes9143426392468860725/io/github/_3xhaust/platform/javafx/JavaFXRenderer$ContainerContext.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/platform/javafx/JavaFXRenderer$1.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes9143426392468860725/io/github/_3xhaust/platform/javafx/JavaFXRenderer$1.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/platform/javafx/FXBootstrap.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes9143426392468860725/io/github/_3xhaust/platform/javafx/FXBootstrap.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/platform/javafx/JavaFXRenderer.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes9143426392468860725/io/github/_3xhaust/platform/javafx/JavaFXRenderer.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/platform/swing/SwingRenderer$2.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes9143426392468860725/io/github/_3xhaust/platform/swing/SwingRenderer$2.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/platform/swing/SwingRenderer.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes9143426392468860725/io/github/_3xhaust/platform/swing/SwingRenderer.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/platform/swing/SwingRenderer$1.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes9143426392468860725/io/github/_3xhaust/platform/swing/SwingRenderer$1.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/platform/swing/SwingRenderer$ContainerContext.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes9143426392468860725/io/github/_3xhaust/platform/swing/SwingRenderer$ContainerContext.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/state/State.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes9143426392468860725/io/github/_3xhaust/state/State.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/theme/Colors.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes9143426392468860725/io/github/_3xhaust/theme/Colors.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/Mod$FontModifier.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes9143426392468860725/io/github/_3xhaust/dsl/Mod$FontModifier.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/Widgets$ButtonWidget.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes9143426392468860725/io/github/_3xhaust/dsl/Widgets$ButtonWidget.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/Layouts$RowWidget.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes9143426392468860725/io/github/_3xhaust/dsl/Layouts$RowWidget.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/Layouts$SizedBoxWidget.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes9143426392468860725/io/github/_3xhaust/dsl/Layouts$SizedBoxWidget.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/Layouts$ExpandedWidget.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes9143426392468860725/io/github/_3xhaust/dsl/Layouts$ExpandedWidget.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/Layouts$CenterWidget.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes9143426392468860725/io/github/_3xhaust/dsl/Layouts$CenterWidget.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/enums/MainAxisSize.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes9143426392468860725/io/github/_3xhaust/dsl/enums/MainAxisSize.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/enums/MainAxisAlignment.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes9143426392468860725/io/github/_3xhaust/dsl/enums/MainAxisAlignment.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/enums/CrossAxisAlignment.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes9143426392468860725/io/github/_3xhaust/dsl/enums/CrossAxisAlignment.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/Mod.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes9143426392468860725/io/github/_3xhaust/dsl/Mod.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/Style$Border.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes9143426392468860725/io/github/_3xhaust/dsl/Style$Border.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/styles/TextStyle.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes9143426392468860725/io/github/_3xhaust/dsl/styles/TextStyle.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/styles/BorderStyle.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes9143426392468860725/io/github/_3xhaust/dsl/styles/BorderStyle.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/styles/ButtonStyle.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes9143426392468860725/io/github/_3xhaust/dsl/styles/ButtonStyle.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/Widgets$TextWidget.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes9143426392468860725/io/github/_3xhaust/dsl/Widgets$TextWidget.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/Style.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes9143426392468860725/io/github/_3xhaust/dsl/Style.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/Layouts$ColumnWidget.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes9143426392468860725/io/github/_3xhaust/dsl/Layouts$ColumnWidget.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/Widgets.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes9143426392468860725/io/github/_3xhaust/dsl/Widgets.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/Layouts.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes9143426392468860725/io/github/_3xhaust/dsl/Layouts.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/Layouts$FlexibleWidget.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes9143426392468860725/io/github/_3xhaust/dsl/Layouts$FlexibleWidget.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/Widgets$BorderInfo.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes9143426392468860725/io/github/_3xhaust/dsl/Widgets$BorderInfo.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/examples/hello_world/Main.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes9143426392468860725/examples/hello_world/Main.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/resources/main/META-INF/native-image/io.github._3xhaust/javaUI/reflect-config.json to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes9143426392468860725/META-INF/native-image/io.github._3xhaust/javaUI/reflect-config.json
+[화 8월 12 00:50:32 KST 2025][미세] PB Command for jar: /Applications/Android Studio.app/Contents/jbr/Contents/Home/bin/jar cf /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes9143426392468860725/classes.jar -C /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes9143426392468860725 .
+[화 8월 12 00:50:32 KST 2025][미세] Start process jar...
+[화 8월 12 00:50:32 KST 2025][미세] Result for jar: 0
+[화 8월 12 00:50:32 KST 2025][미세] Scanning for init build time files
+[화 8월 12 00:50:32 KST 2025][미세] Scanning /Users/bagjun-won/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.38/57f8f5e02e92a30fd21b80cbd426a4172b5f8e29/lombok-1.18.38.jar
+[화 8월 12 00:50:32 KST 2025][미세] Scanning /Users/bagjun-won/.gluon/substrate/javafxStaticSdk/21-ea+11.2/ios-arm64/sdk/lib/javafx.controls.jar
+[화 8월 12 00:50:32 KST 2025][미세] Scanning /Users/bagjun-won/.gluon/substrate/javafxStaticSdk/21-ea+11.2/ios-arm64/sdk/lib/javafx.graphics.jar
+[화 8월 12 00:50:32 KST 2025][미세] Scanning /Users/bagjun-won/.gluon/substrate/javafxStaticSdk/21-ea+11.2/ios-arm64/sdk/lib/javafx.base.jar
+[화 8월 12 00:50:32 KST 2025][미세] Scanning /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes9143426392468860725/classes.jar
+[화 8월 12 00:50:32 KST 2025][미세] Scanning for reflection files
+[화 8월 12 00:50:32 KST 2025][미세] Scanning /Users/bagjun-won/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.38/57f8f5e02e92a30fd21b80cbd426a4172b5f8e29/lombok-1.18.38.jar
+[화 8월 12 00:50:32 KST 2025][미세] Scanning /Users/bagjun-won/.gluon/substrate/javafxStaticSdk/21-ea+11.2/ios-arm64/sdk/lib/javafx.controls.jar
+[화 8월 12 00:50:32 KST 2025][미세] Adding classes from /Users/bagjun-won/.gluon/substrate/javafxStaticSdk/21-ea+11.2/ios-arm64/sdk/lib/javafx.controls.jar::META-INF/substrate/config/reflectionconfig-x86_64-ios.json
+[화 8월 12 00:50:32 KST 2025][미세] Adding classes from /Users/bagjun-won/.gluon/substrate/javafxStaticSdk/21-ea+11.2/ios-arm64/sdk/lib/javafx.controls.jar::META-INF/substrate/config/reflectionconfig.json
+[화 8월 12 00:50:32 KST 2025][미세] Scanning /Users/bagjun-won/.gluon/substrate/javafxStaticSdk/21-ea+11.2/ios-arm64/sdk/lib/javafx.graphics.jar
+[화 8월 12 00:50:32 KST 2025][미세] Adding classes from /Users/bagjun-won/.gluon/substrate/javafxStaticSdk/21-ea+11.2/ios-arm64/sdk/lib/javafx.graphics.jar::META-INF/substrate/config/reflectionconfig-x86_64-ios.json
+[화 8월 12 00:50:32 KST 2025][미세] Adding classes from /Users/bagjun-won/.gluon/substrate/javafxStaticSdk/21-ea+11.2/ios-arm64/sdk/lib/javafx.graphics.jar::META-INF/substrate/config/reflectionconfig.json
+[화 8월 12 00:50:32 KST 2025][미세] Scanning /Users/bagjun-won/.gluon/substrate/javafxStaticSdk/21-ea+11.2/ios-arm64/sdk/lib/javafx.base.jar
+[화 8월 12 00:50:32 KST 2025][미세] Adding classes from /Users/bagjun-won/.gluon/substrate/javafxStaticSdk/21-ea+11.2/ios-arm64/sdk/lib/javafx.base.jar::META-INF/substrate/config/reflectionconfig.json
+[화 8월 12 00:50:32 KST 2025][미세] Scanning /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes9143426392468860725/classes.jar
+[화 8월 12 00:50:32 KST 2025][미세] Scanning for JNI files
+[화 8월 12 00:50:32 KST 2025][미세] Scanning /Users/bagjun-won/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.38/57f8f5e02e92a30fd21b80cbd426a4172b5f8e29/lombok-1.18.38.jar
+[화 8월 12 00:50:32 KST 2025][미세] Scanning /Users/bagjun-won/.gluon/substrate/javafxStaticSdk/21-ea+11.2/ios-arm64/sdk/lib/javafx.controls.jar
+[화 8월 12 00:50:32 KST 2025][미세] Scanning /Users/bagjun-won/.gluon/substrate/javafxStaticSdk/21-ea+11.2/ios-arm64/sdk/lib/javafx.graphics.jar
+[화 8월 12 00:50:32 KST 2025][미세] Adding classes from /Users/bagjun-won/.gluon/substrate/javafxStaticSdk/21-ea+11.2/ios-arm64/sdk/lib/javafx.graphics.jar::META-INF/substrate/config/jniconfig.json
+[화 8월 12 00:50:32 KST 2025][미세] Adding classes from /Users/bagjun-won/.gluon/substrate/javafxStaticSdk/21-ea+11.2/ios-arm64/sdk/lib/javafx.graphics.jar::META-INF/substrate/config/jniconfig-x86_64-ios.json
+[화 8월 12 00:50:32 KST 2025][미세] Scanning /Users/bagjun-won/.gluon/substrate/javafxStaticSdk/21-ea+11.2/ios-arm64/sdk/lib/javafx.base.jar
+[화 8월 12 00:50:32 KST 2025][미세] Scanning /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes9143426392468860725/classes.jar
+[화 8월 12 00:50:32 KST 2025][미세] Scanning for resource files
+[화 8월 12 00:50:32 KST 2025][미세] Scanning /Users/bagjun-won/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.38/57f8f5e02e92a30fd21b80cbd426a4172b5f8e29/lombok-1.18.38.jar
+[화 8월 12 00:50:32 KST 2025][미세] Scanning /Users/bagjun-won/.gluon/substrate/javafxStaticSdk/21-ea+11.2/ios-arm64/sdk/lib/javafx.controls.jar
+[화 8월 12 00:50:32 KST 2025][미세] Scanning /Users/bagjun-won/.gluon/substrate/javafxStaticSdk/21-ea+11.2/ios-arm64/sdk/lib/javafx.graphics.jar
+[화 8월 12 00:50:32 KST 2025][미세] Scanning /Users/bagjun-won/.gluon/substrate/javafxStaticSdk/21-ea+11.2/ios-arm64/sdk/lib/javafx.base.jar
+[화 8월 12 00:50:32 KST 2025][미세] Scanning /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes9143426392468860725/classes.jar
+[화 8월 12 00:50:32 KST 2025][미세] Looking for resource: /native/ios/cap/AArch64LibCHelperDirectives.cap
+[화 8월 12 00:50:32 KST 2025][미세] Looking for resource: /native/ios/cap/AMD64LibCHelperDirectives.cap
+[화 8월 12 00:50:32 KST 2025][미세] Looking for resource: /native/ios/cap/BuiltinDirectives.cap
+[화 8월 12 00:50:32 KST 2025][미세] Looking for resource: /native/ios/cap/JNIHeaderDirectives.cap
+[화 8월 12 00:50:32 KST 2025][미세] Looking for resource: /native/ios/cap/LibFFIHeaderDirectives.cap
+[화 8월 12 00:50:32 KST 2025][미세] Looking for resource: /native/ios/cap/LLVMDirectives.cap
+[화 8월 12 00:50:32 KST 2025][미세] Looking for resource: /native/ios/cap/PosixDirectives.cap
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/core/View.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes12046362697626670954/io/github/_3xhaust/core/View.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/core/Launcher.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes12046362697626670954/io/github/_3xhaust/core/Launcher.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/core/App.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes12046362697626670954/io/github/_3xhaust/core/App.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/core/Insets.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes12046362697626670954/io/github/_3xhaust/core/Insets.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/core/Launcher$PlatformType.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes12046362697626670954/io/github/_3xhaust/core/Launcher$PlatformType.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/core/Renderer.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes12046362697626670954/io/github/_3xhaust/core/Renderer.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/platform/javafx/JavaFXRenderer$ContainerContext.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes12046362697626670954/io/github/_3xhaust/platform/javafx/JavaFXRenderer$ContainerContext.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/platform/javafx/JavaFXRenderer$1.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes12046362697626670954/io/github/_3xhaust/platform/javafx/JavaFXRenderer$1.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/platform/javafx/FXBootstrap.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes12046362697626670954/io/github/_3xhaust/platform/javafx/FXBootstrap.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/platform/javafx/JavaFXRenderer.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes12046362697626670954/io/github/_3xhaust/platform/javafx/JavaFXRenderer.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/platform/swing/SwingRenderer$2.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes12046362697626670954/io/github/_3xhaust/platform/swing/SwingRenderer$2.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/platform/swing/SwingRenderer.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes12046362697626670954/io/github/_3xhaust/platform/swing/SwingRenderer.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/platform/swing/SwingRenderer$1.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes12046362697626670954/io/github/_3xhaust/platform/swing/SwingRenderer$1.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/platform/swing/SwingRenderer$ContainerContext.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes12046362697626670954/io/github/_3xhaust/platform/swing/SwingRenderer$ContainerContext.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/state/State.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes12046362697626670954/io/github/_3xhaust/state/State.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/theme/Colors.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes12046362697626670954/io/github/_3xhaust/theme/Colors.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/Mod$FontModifier.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes12046362697626670954/io/github/_3xhaust/dsl/Mod$FontModifier.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/Widgets$ButtonWidget.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes12046362697626670954/io/github/_3xhaust/dsl/Widgets$ButtonWidget.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/Layouts$RowWidget.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes12046362697626670954/io/github/_3xhaust/dsl/Layouts$RowWidget.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/Layouts$SizedBoxWidget.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes12046362697626670954/io/github/_3xhaust/dsl/Layouts$SizedBoxWidget.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/Layouts$ExpandedWidget.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes12046362697626670954/io/github/_3xhaust/dsl/Layouts$ExpandedWidget.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/Layouts$CenterWidget.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes12046362697626670954/io/github/_3xhaust/dsl/Layouts$CenterWidget.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/enums/MainAxisSize.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes12046362697626670954/io/github/_3xhaust/dsl/enums/MainAxisSize.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/enums/MainAxisAlignment.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes12046362697626670954/io/github/_3xhaust/dsl/enums/MainAxisAlignment.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/enums/CrossAxisAlignment.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes12046362697626670954/io/github/_3xhaust/dsl/enums/CrossAxisAlignment.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/Mod.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes12046362697626670954/io/github/_3xhaust/dsl/Mod.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/Style$Border.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes12046362697626670954/io/github/_3xhaust/dsl/Style$Border.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/styles/TextStyle.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes12046362697626670954/io/github/_3xhaust/dsl/styles/TextStyle.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/styles/BorderStyle.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes12046362697626670954/io/github/_3xhaust/dsl/styles/BorderStyle.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/styles/ButtonStyle.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes12046362697626670954/io/github/_3xhaust/dsl/styles/ButtonStyle.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/Widgets$TextWidget.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes12046362697626670954/io/github/_3xhaust/dsl/Widgets$TextWidget.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/Style.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes12046362697626670954/io/github/_3xhaust/dsl/Style.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/Layouts$ColumnWidget.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes12046362697626670954/io/github/_3xhaust/dsl/Layouts$ColumnWidget.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/Widgets.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes12046362697626670954/io/github/_3xhaust/dsl/Widgets.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/Layouts.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes12046362697626670954/io/github/_3xhaust/dsl/Layouts.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/Layouts$FlexibleWidget.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes12046362697626670954/io/github/_3xhaust/dsl/Layouts$FlexibleWidget.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/Widgets$BorderInfo.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes12046362697626670954/io/github/_3xhaust/dsl/Widgets$BorderInfo.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/examples/hello_world/Main.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes12046362697626670954/examples/hello_world/Main.class
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/resources/main/META-INF/native-image/io.github._3xhaust/javaUI/reflect-config.json to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes12046362697626670954/META-INF/native-image/io.github._3xhaust/javaUI/reflect-config.json
+[화 8월 12 00:50:32 KST 2025][미세] PB Command for jar: /Applications/Android Studio.app/Contents/jbr/Contents/Home/bin/jar cf /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes12046362697626670954/classes.jar -C /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes12046362697626670954 .
+[화 8월 12 00:50:32 KST 2025][미세] Start process jar...
+[화 8월 12 00:50:32 KST 2025][미세] Result for jar: 0
+[화 8월 12 00:50:32 KST 2025][미세] Scanning for resource bundles
+[화 8월 12 00:50:32 KST 2025][미세] Scanning /Users/bagjun-won/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.38/57f8f5e02e92a30fd21b80cbd426a4172b5f8e29/lombok-1.18.38.jar
+[화 8월 12 00:50:32 KST 2025][미세] Scanning /Users/bagjun-won/.gluon/substrate/javafxStaticSdk/21-ea+11.2/ios-arm64/sdk/lib/javafx.controls.jar
+[화 8월 12 00:50:32 KST 2025][미세] Adding classes from /Users/bagjun-won/.gluon/substrate/javafxStaticSdk/21-ea+11.2/ios-arm64/sdk/lib/javafx.controls.jar::META-INF/substrate/config/resourcebundles
+[화 8월 12 00:50:32 KST 2025][미세] Scanning /Users/bagjun-won/.gluon/substrate/javafxStaticSdk/21-ea+11.2/ios-arm64/sdk/lib/javafx.graphics.jar
+[화 8월 12 00:50:32 KST 2025][미세] Adding classes from /Users/bagjun-won/.gluon/substrate/javafxStaticSdk/21-ea+11.2/ios-arm64/sdk/lib/javafx.graphics.jar::META-INF/substrate/config/resourcebundles
+[화 8월 12 00:50:32 KST 2025][미세] Scanning /Users/bagjun-won/.gluon/substrate/javafxStaticSdk/21-ea+11.2/ios-arm64/sdk/lib/javafx.base.jar
+[화 8월 12 00:50:32 KST 2025][미세] Scanning /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes12046362697626670954/classes.jar
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.38/57f8f5e02e92a30fd21b80cbd426a4172b5f8e29/lombok-1.18.38.jar to /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/gvm/tmp/deps/lombok-1.18.38.jar
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/.gluon/substrate/javafxStaticSdk/21-ea+11.2/ios-arm64/sdk/lib/javafx.controls.jar to /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/gvm/tmp/deps/javafx.controls.jar
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/.gluon/substrate/javafxStaticSdk/21-ea+11.2/ios-arm64/sdk/lib/javafx.graphics.jar to /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/gvm/tmp/deps/javafx.graphics.jar
+[화 8월 12 00:50:32 KST 2025][미세] Copied resource /Users/bagjun-won/.gluon/substrate/javafxStaticSdk/21-ea+11.2/ios-arm64/sdk/lib/javafx.base.jar to /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/gvm/tmp/deps/javafx.base.jar
+[화 8월 12 00:50:32 KST 2025][미세] Class-Path manifest entry for pathing jar: ../../../../classes/java/main ../../../../resources/main deps/lombok-1.18.38.jar deps/javafx.controls.jar deps/javafx.graphics.jar deps/javafx.base.jar
+[화 8월 12 00:50:32 KST 2025][미세] Pathing jar created at /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/gvm/tmp/classpathJar.jar
+[화 8월 12 00:50:32 KST 2025][미세] PB Command for compile: /Users/bagjun-won/Graal/graalvm-svm-java17-darwin-gluon-22.1.0.1-Final/Contents/Home/bin/native-image -Djdk.internal.lambda.eagerlyInitialize=false --no-server -H:+SharedLibrary -H:+AddAllCharsets -H:+ReportExceptionStackTraces -H:-DeadlockWatchdogExitOnTimeout -H:DeadlockWatchdogInterval=0 -H:+RemoveSaturatedTypeFlows -H:+ExitAfterRelocatableImageWrite --features=org.graalvm.home.HomeFinderFeature -H:TempDirectory=/Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/gvm/tmp -H:EnableURLProtocols=http,https -H:ReflectionConfigurationFiles=/Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/gvm/reflectionconfig-x86_64-ios.json -H:JNIConfigurationFiles=/Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/gvm/jniconfig-x86_64-ios.json -H:ResourceConfigurationFiles=/Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/gvm/resourceconfig-x86_64-ios.json -H:PageSize=16384 -Dsvm.targetName=iOS -Dsvm.targetArch=x86_64 -H:+UseCAPCache -H:CAPCacheDir=/Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/gvm/capcache -H:IncludeResourceBundles=com/sun/javafx/scene/control/skin/resources/controls,com/sun/javafx/scene/control/skin/resources/controls-nt,com.sun.javafx.tk.quantum.QuantumMessagesBundle -Dsvm.platform=org.graalvm.nativeimage.Platform$IOS_AMD64 -cp /Users/bagjun-won/.gradle/caches/modules-2/files-2.1/com.gluonhq/substrate/0.0.67/737a81dcee36b74ae2bd4116c5404d7b2653a15f/substrate-0.0.67.jar:/Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/gvm/tmp/classpathJar.jar examples.hello_world.Main
+[화 8월 12 00:50:32 KST 2025][미세] Start process compile...
+[화 8월 12 00:50:32 KST 2025][정보] [SUB] Warning: Ignoring server-mode native-image argument --no-server.
+[화 8월 12 00:50:40 KST 2025][정보] [SUB] ========================================================================================================================
+[화 8월 12 00:50:40 KST 2025][정보] [SUB] GraalVM Native Image: Generating 'examples.hello_world.main' (shared library)...
+[화 8월 12 00:50:40 KST 2025][정보] [SUB] ========================================================================================================================
+[화 8월 12 00:50:49 KST 2025][정보] [SUB] [1/7] Initializing...                                                                                   (13.3s @ 0.14GB)
+[화 8월 12 00:50:49 KST 2025][정보] [SUB]  Version info: 'GraalVM 22.1.0.1 Java 17 CE'
+[화 8월 12 00:50:49 KST 2025][정보] [SUB]  Garbage collector: Serial GC
+[화 8월 12 00:52:26 KST 2025][정보] [SUB] [2/7] Performing analysis...  [**************]                                                          (96.6s @ 3.03GB)
+[화 8월 12 00:52:26 KST 2025][정보] [SUB]   13,119 (90.91%) of 14,431 classes reachable
+[화 8월 12 00:52:26 KST 2025][정보] [SUB]   24,498 (67.66%) of 36,207 fields reachable
+[화 8월 12 00:52:26 KST 2025][정보] [SUB]   64,601 (63.59%) of 101,589 methods reachable
+[화 8월 12 00:52:26 KST 2025][정보] [SUB]      648 classes,   115 fields, and 2,043 methods registered for reflection
+[화 8월 12 00:52:26 KST 2025][정보] [SUB]      114 classes,   107 fields, and   191 methods registered for JNI access
+[화 8월 12 00:52:34 KST 2025][정보] [SUB] [3/7] Building universe...                                                                               (7.1s @ 3.92GB)
+[화 8월 12 00:52:41 KST 2025][정보] [SUB] [4/7] Parsing methods...      [***]                                                                      (6.6s @ 1.59GB)
+[화 8월 12 00:52:45 KST 2025][정보] [SUB] [5/7] Inlining methods...     [****]                                                                     (4.3s @ 3.03GB)
+[화 8월 12 00:52:47 KST 2025][미세] Checking execution permissions for /Users/bagjun-won/Graal/graalvm-svm-java17-darwin-gluon-22.1.0.1-Final
+[화 8월 12 00:52:47 KST 2025][미세] PB Command for check xattr: xattr /Users/bagjun-won/Graal/graalvm-svm-java17-darwin-gluon-22.1.0.1-Final
+[화 8월 12 00:52:47 KST 2025][미세] Start process check xattr...
+[화 8월 12 00:52:47 KST 2025][미세] [SUB] com.apple.provenance
+[화 8월 12 00:52:47 KST 2025][미세] Result for check xattr: 0
+[화 8월 12 00:52:47 KST 2025][미세] PB Command for check version: /Users/bagjun-won/Graal/graalvm-svm-java17-darwin-gluon-22.1.0.1-Final/Contents/Home/bin/java -version
+[화 8월 12 00:52:47 KST 2025][미세] Start process check version...
+[화 8월 12 00:52:48 KST 2025][미세] [SUB] openjdk version "17.0.3" 2022-04-19
+[화 8월 12 00:52:48 KST 2025][미세] [SUB] OpenJDK Runtime Environment GraalVM 22.1.0.1 (build 17.0.3+7-jvmci-22.1-b06)
+[화 8월 12 00:52:48 KST 2025][미세] [SUB] OpenJDK 64-Bit Server VM GraalVM 22.1.0.1 (build 17.0.3+7-jvmci-22.1-b06, mixed mode, sharing)
+[화 8월 12 00:52:48 KST 2025][미세] Result for check version: 0

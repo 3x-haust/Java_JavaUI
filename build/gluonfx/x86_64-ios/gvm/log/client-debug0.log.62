@@ -1,0 +1,142 @@
+[화 8월 12 00:56:42 KST 2025][정보] ==================== INSTALL TASK ====================
+[화 8월 12 00:56:42 KST 2025][미세] PB Command for check brew: which brew
+[화 8월 12 00:56:42 KST 2025][미세] Start process check brew...
+[화 8월 12 00:56:42 KST 2025][미세] [SUB] /opt/homebrew/bin/brew
+[화 8월 12 00:56:42 KST 2025][미세] Result for check brew: 0
+[화 8월 12 00:56:42 KST 2025][미세] Brew found at /opt/homebrew/bin/brew
+[화 8월 12 00:56:42 KST 2025][미세] PB Command for libssl: /bin/sh -c find $(brew --cellar) -name libssl.dylib
+[화 8월 12 00:56:42 KST 2025][미세] Start process libssl...
+[화 8월 12 00:56:45 KST 2025][미세] [SUB] /opt/homebrew/Cellar/openssl@3/3.5.2/lib/libssl.dylib
+[화 8월 12 00:56:45 KST 2025][미세] [SUB] /opt/homebrew/Cellar/openssl@3/3.5.0/lib/libssl.dylib
+[화 8월 12 00:56:45 KST 2025][미세] Result for libssl: 0
+[화 8월 12 00:56:45 KST 2025][미세] lib libssl found at /opt/homebrew/Cellar/openssl@3/3.5.2/lib/libssl.dylib
+[화 8월 12 00:56:45 KST 2025][미세] lib libssl found at /opt/homebrew/Cellar/openssl@3/3.5.0/lib/libssl.dylib
+[화 8월 12 00:56:45 KST 2025][미세] PB Command for readlink libssl: readlink /opt/homebrew/Cellar/openssl@3/3.5.2/lib/libssl.dylib
+[화 8월 12 00:56:45 KST 2025][미세] Start process readlink libssl...
+[화 8월 12 00:56:45 KST 2025][미세] [SUB] libssl.3.dylib
+[화 8월 12 00:56:45 KST 2025][미세] Result for readlink libssl: 0
+[화 8월 12 00:56:45 KST 2025][미세] libssl.dylib link of: libssl.3.dylib
+[화 8월 12 00:56:45 KST 2025][미세] PB Command for readlink libssl: readlink /opt/homebrew/Cellar/openssl@3/3.5.0/lib/libssl.dylib
+[화 8월 12 00:56:45 KST 2025][미세] Start process readlink libssl...
+[화 8월 12 00:56:45 KST 2025][미세] [SUB] libssl.3.dylib
+[화 8월 12 00:56:45 KST 2025][미세] Result for readlink libssl: 0
+[화 8월 12 00:56:45 KST 2025][미세] libssl.dylib link of: libssl.3.dylib
+[화 8월 12 00:56:45 KST 2025][미세] PB Command for libcrypto: /bin/sh -c find $(brew --cellar) -name libcrypto.dylib
+[화 8월 12 00:56:45 KST 2025][미세] Start process libcrypto...
+[화 8월 12 00:56:47 KST 2025][미세] [SUB] /opt/homebrew/Cellar/openssl@3/3.5.2/lib/libcrypto.dylib
+[화 8월 12 00:56:47 KST 2025][미세] [SUB] /opt/homebrew/Cellar/openssl@3/3.5.0/lib/libcrypto.dylib
+[화 8월 12 00:56:47 KST 2025][미세] Result for libcrypto: 0
+[화 8월 12 00:56:47 KST 2025][미세] lib libcrypto found at /opt/homebrew/Cellar/openssl@3/3.5.2/lib/libcrypto.dylib
+[화 8월 12 00:56:47 KST 2025][미세] lib libcrypto found at /opt/homebrew/Cellar/openssl@3/3.5.0/lib/libcrypto.dylib
+[화 8월 12 00:56:47 KST 2025][미세] PB Command for readlink libcrypto: readlink /opt/homebrew/Cellar/openssl@3/3.5.2/lib/libcrypto.dylib
+[화 8월 12 00:56:47 KST 2025][미세] Start process readlink libcrypto...
+[화 8월 12 00:56:47 KST 2025][미세] [SUB] libcrypto.3.dylib
+[화 8월 12 00:56:47 KST 2025][미세] Result for readlink libcrypto: 0
+[화 8월 12 00:56:47 KST 2025][미세] libcrypto.dylib link of: libcrypto.3.dylib
+[화 8월 12 00:56:47 KST 2025][미세] PB Command for readlink libcrypto: readlink /opt/homebrew/Cellar/openssl@3/3.5.0/lib/libcrypto.dylib
+[화 8월 12 00:56:47 KST 2025][미세] Start process readlink libcrypto...
+[화 8월 12 00:56:47 KST 2025][미세] [SUB] libcrypto.3.dylib
+[화 8월 12 00:56:47 KST 2025][미세] Result for readlink libcrypto: 0
+[화 8월 12 00:56:47 KST 2025][미세] libcrypto.dylib link of: libcrypto.3.dylib
+[화 8월 12 00:56:47 KST 2025][미세] PB Command for libusbmuxd-2.0: /bin/sh -c find $(brew --cellar) -name libusbmuxd-2.0.dylib
+[화 8월 12 00:56:47 KST 2025][미세] Start process libusbmuxd-2.0...
+[화 8월 12 00:56:48 KST 2025][미세] [SUB] /opt/homebrew/Cellar/libusbmuxd/HEAD-fc4bca6/lib/libusbmuxd-2.0.dylib
+[화 8월 12 00:56:48 KST 2025][미세] Result for libusbmuxd-2.0: 0
+[화 8월 12 00:56:48 KST 2025][미세] lib libusbmuxd-2.0 found at /opt/homebrew/Cellar/libusbmuxd/HEAD-fc4bca6/lib/libusbmuxd-2.0.dylib
+[화 8월 12 00:56:48 KST 2025][미세] PB Command for readlink libusbmuxd-2.0: readlink /opt/homebrew/Cellar/libusbmuxd/HEAD-fc4bca6/lib/libusbmuxd-2.0.dylib
+[화 8월 12 00:56:48 KST 2025][미세] Start process readlink libusbmuxd-2.0...
+[화 8월 12 00:56:48 KST 2025][미세] [SUB] libusbmuxd-2.0.7.dylib
+[화 8월 12 00:56:48 KST 2025][미세] Result for readlink libusbmuxd-2.0: 0
+[화 8월 12 00:56:48 KST 2025][미세] libusbmuxd-2.0.dylib link of: libusbmuxd-2.0.7.dylib
+[화 8월 12 00:56:48 KST 2025][미세] PB Command for libplist-2.0: /bin/sh -c find $(brew --cellar) -name libplist-2.0.dylib
+[화 8월 12 00:56:48 KST 2025][미세] Start process libplist-2.0...
+[화 8월 12 00:56:49 KST 2025][미세] [SUB] /opt/homebrew/Cellar/libplist/2.7.0/lib/libplist-2.0.dylib
+[화 8월 12 00:56:49 KST 2025][미세] Result for libplist-2.0: 0
+[화 8월 12 00:56:49 KST 2025][미세] lib libplist-2.0 found at /opt/homebrew/Cellar/libplist/2.7.0/lib/libplist-2.0.dylib
+[화 8월 12 00:56:49 KST 2025][미세] PB Command for readlink libplist-2.0: readlink /opt/homebrew/Cellar/libplist/2.7.0/lib/libplist-2.0.dylib
+[화 8월 12 00:56:49 KST 2025][미세] Start process readlink libplist-2.0...
+[화 8월 12 00:56:49 KST 2025][미세] [SUB] libplist-2.0.4.dylib
+[화 8월 12 00:56:49 KST 2025][미세] Result for readlink libplist-2.0: 0
+[화 8월 12 00:56:49 KST 2025][미세] libplist-2.0.dylib link of: libplist-2.0.4.dylib
+[화 8월 12 00:56:49 KST 2025][미세] PB Command for libimobiledevice-1.0: /bin/sh -c find $(brew --cellar) -name libimobiledevice-1.0.dylib
+[화 8월 12 00:56:49 KST 2025][미세] Start process libimobiledevice-1.0...
+[화 8월 12 00:56:50 KST 2025][미세] [SUB] /opt/homebrew/Cellar/libimobiledevice/HEAD-c269d7e_3/lib/libimobiledevice-1.0.dylib
+[화 8월 12 00:56:50 KST 2025][미세] Result for libimobiledevice-1.0: 0
+[화 8월 12 00:56:50 KST 2025][미세] lib libimobiledevice-1.0 found at /opt/homebrew/Cellar/libimobiledevice/HEAD-c269d7e_3/lib/libimobiledevice-1.0.dylib
+[화 8월 12 00:56:50 KST 2025][미세] PB Command for otool: otool -L /opt/homebrew/Cellar/libimobiledevice/HEAD-c269d7e_3/lib/libimobiledevice-1.0.dylib
+[화 8월 12 00:56:50 KST 2025][미세] Start process otool...
+[화 8월 12 00:56:50 KST 2025][미세] [SUB] /opt/homebrew/Cellar/libimobiledevice/HEAD-c269d7e_3/lib/libimobiledevice-1.0.dylib:
+[화 8월 12 00:56:50 KST 2025][미세] [SUB] 	/opt/homebrew/opt/libimobiledevice/lib/libimobiledevice-1.0.6.dylib (compatibility version 7.0.0, current version 7.0.0)
+[화 8월 12 00:56:50 KST 2025][미세] [SUB] 	/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (compatibility version 150.0.0, current version 3208.0.0)
+[화 8월 12 00:56:50 KST 2025][미세] [SUB] 	/System/Library/Frameworks/SystemConfiguration.framework/Versions/A/SystemConfiguration (compatibility version 1.0.0, current version 1351.0.0)
+[화 8월 12 00:56:50 KST 2025][미세] [SUB] 	/opt/homebrew/opt/openssl@3/lib/libssl.3.dylib (compatibility version 3.0.0, current version 3.0.0)
+[화 8월 12 00:56:50 KST 2025][미세] [SUB] 	/opt/homebrew/opt/openssl@3/lib/libcrypto.3.dylib (compatibility version 3.0.0, current version 3.0.0)
+[화 8월 12 00:56:50 KST 2025][미세] [SUB] 	/opt/homebrew/opt/libusbmuxd/lib/libusbmuxd-2.0.7.dylib (compatibility version 8.0.0, current version 8.1.0)
+[화 8월 12 00:56:50 KST 2025][미세] [SUB] 	/opt/homebrew/opt/libimobiledevice-glue/lib/libimobiledevice-glue-1.0.0.dylib (compatibility version 4.0.0, current version 4.2.0)
+[화 8월 12 00:56:50 KST 2025][미세] [SUB] 	/opt/homebrew/opt/libplist/lib/libplist-2.0.4.dylib (compatibility version 12.0.0, current version 12.0.0)
+[화 8월 12 00:56:50 KST 2025][미세] [SUB] 	/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1351.0.0)
+[화 8월 12 00:56:50 KST 2025][미세] Result for otool: 0
+[화 8월 12 00:56:50 KST 2025][미세] PB Command for check ios-deploy: which ios-deploy
+[화 8월 12 00:56:50 KST 2025][미세] Start process check ios-deploy...
+[화 8월 12 00:56:50 KST 2025][미세] [SUB] /opt/homebrew/bin/ios-deploy
+[화 8월 12 00:56:50 KST 2025][미세] Result for check ios-deploy: 0
+[화 8월 12 00:56:50 KST 2025][미세] PB Command for ios-deploy version: ios-deploy -V
+[화 8월 12 00:56:50 KST 2025][미세] Start process ios-deploy version...
+[화 8월 12 00:56:50 KST 2025][미세] [SUB] 1.12.2
+[화 8월 12 00:56:50 KST 2025][미세] Result for ios-deploy version: 0
+[화 8월 12 00:56:50 KST 2025][미세] ios-deploy found at /opt/homebrew/bin/ios-deploy
+[화 8월 12 00:56:50 KST 2025][미세] Generating debug symbol files...
+[화 8월 12 00:56:50 KST 2025][미세] PB Command for dsymutil: xcrun dsymutil -o /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/javaUI.app.dSYM /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/javaUI.app/javaUI
+[화 8월 12 00:56:50 KST 2025][미세] Start process dsymutil...
+[화 8월 12 00:56:51 KST 2025][미세] Result for dsymutil: 0
+[화 8월 12 00:56:51 KST 2025][미세] Removing older version: javaUI_20250812004721
+[화 8월 12 00:56:51 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/javaUI.app.dSYM/Contents/Resources/Relocations/x86_64/javaUI.yml to /Users/bagjun-won/Library/Developer/Xcode/DerivedData/GluonSubstrate/Build/Products/javaUI_20250812005651/javaUI.app.dSYM/Contents/Resources/Relocations/x86_64/javaUI.yml
+[화 8월 12 00:56:51 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/javaUI.app.dSYM/Contents/Resources/DWARF/javaUI to /Users/bagjun-won/Library/Developer/Xcode/DerivedData/GluonSubstrate/Build/Products/javaUI_20250812005651/javaUI.app.dSYM/Contents/Resources/DWARF/javaUI
+[화 8월 12 00:56:51 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/javaUI.app.dSYM/Contents/Info.plist to /Users/bagjun-won/Library/Developer/Xcode/DerivedData/GluonSubstrate/Build/Products/javaUI_20250812005651/javaUI.app.dSYM/Contents/Info.plist
+[화 8월 12 00:56:51 KST 2025][미세] Got Bundle ID = io.github._3xhaust.javaUI
+[화 8월 12 00:56:51 KST 2025][미세] Preparing SimDevice:  null
+[화 8월 12 00:56:51 KST 2025][미세] PB Command for sim: xcrun simctl list devices
+[화 8월 12 00:56:51 KST 2025][미세] Start process sim...
+[화 8월 12 00:56:51 KST 2025][미세] [SUB] == Devices ==
+[화 8월 12 00:56:51 KST 2025][미세] [SUB] -- iOS 18.3 --
+[화 8월 12 00:56:51 KST 2025][미세] [SUB]     iPhone 16 Pro (58380AFD-CE50-4F0C-92EB-B813EC55C75A) (Shutdown) 
+[화 8월 12 00:56:51 KST 2025][미세] [SUB]     iPhone 16 Pro Max (E918F846-26E2-4126-84C8-E89BD190127A) (Shutdown) 
+[화 8월 12 00:56:51 KST 2025][미세] [SUB]     iPhone 16 (AA154698-C42F-44A0-B02C-B9A9FB9CFC91) (Booted) 
+[화 8월 12 00:56:51 KST 2025][미세] [SUB]     iPhone 16 Plus (4755043E-97B5-454B-BB23-508B38911572) (Shutdown) 
+[화 8월 12 00:56:51 KST 2025][미세] [SUB]     iPhone SE (3rd generation) (AE520129-4DE8-4BFF-A272-56A21B4D7284) (Shutdown) 
+[화 8월 12 00:56:51 KST 2025][미세] [SUB]     iPad Pro 11-inch (M4) (49EEB186-470C-41B4-B03A-78D8B33BB6FE) (Shutdown) 
+[화 8월 12 00:56:51 KST 2025][미세] [SUB]     iPad Pro 13-inch (M4) (D8EEEC16-D609-49B4-81F9-8728EA95487F) (Shutdown) 
+[화 8월 12 00:56:51 KST 2025][미세] [SUB]     iPad Air 11-inch (M2) (31355430-1ECC-495A-9B33-3F556F3F2958) (Shutdown) 
+[화 8월 12 00:56:51 KST 2025][미세] [SUB]     iPad Air 13-inch (M2) (64E44DCA-3E89-45DE-A877-AC0D5D4F08A5) (Shutdown) 
+[화 8월 12 00:56:51 KST 2025][미세] [SUB]     iPad mini (A17 Pro) (76333F09-FC0B-43B3-AE28-31008E984EF9) (Shutdown) 
+[화 8월 12 00:56:51 KST 2025][미세] [SUB]     iPad (10th generation) (5D422660-8B15-453B-97C2-09C207B267DA) (Shutdown) 
+[화 8월 12 00:56:51 KST 2025][미세] Result for sim: 0
+[화 8월 12 00:56:51 KST 2025][미세] Number of simulator devices found: 11
+[화 8월 12 00:56:51 KST 2025][미세] List of simulator devices found: 11
+SimDevice{name='iPhone 16 Pro', id='58380AFD-CE50-4F0C-92EB-B813EC55C75A', state='(Shutdown)'}
+SimDevice{name='iPhone 16 Pro Max', id='E918F846-26E2-4126-84C8-E89BD190127A', state='(Shutdown)'}
+SimDevice{name='iPhone 16', id='AA154698-C42F-44A0-B02C-B9A9FB9CFC91', state='(Booted)'}
+SimDevice{name='iPhone 16 Plus', id='4755043E-97B5-454B-BB23-508B38911572', state='(Shutdown)'}
+SimDevice{name='iPhone SE (3rd generation)', id='AE520129-4DE8-4BFF-A272-56A21B4D7284', state='(Shutdown)'}
+SimDevice{name='iPad Pro 11-inch (M4)', id='49EEB186-470C-41B4-B03A-78D8B33BB6FE', state='(Shutdown)'}
+SimDevice{name='iPad Pro 13-inch (M4)', id='D8EEEC16-D609-49B4-81F9-8728EA95487F', state='(Shutdown)'}
+SimDevice{name='iPad Air 11-inch (M2)', id='31355430-1ECC-495A-9B33-3F556F3F2958', state='(Shutdown)'}
+SimDevice{name='iPad Air 13-inch (M2)', id='64E44DCA-3E89-45DE-A877-AC0D5D4F08A5', state='(Shutdown)'}
+SimDevice{name='iPad mini (A17 Pro)', id='76333F09-FC0B-43B3-AE28-31008E984EF9', state='(Shutdown)'}
+SimDevice{name='iPad (10th generation)', id='5D422660-8B15-453B-97C2-09C207B267DA', state='(Shutdown)'}
+[화 8월 12 00:56:51 KST 2025][미세] Found SimDevice: SimDevice{name='iPhone 16', id='AA154698-C42F-44A0-B02C-B9A9FB9CFC91', state='(Booted)'}
+[화 8월 12 00:56:51 KST 2025][미세] PB Command for install: xcrun simctl install AA154698-C42F-44A0-B02C-B9A9FB9CFC91 /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/javaUI.app
+[화 8월 12 00:56:51 KST 2025][미세] Start process install...
+[화 8월 12 00:56:51 KST 2025][미세] Result for install: 0
+[화 8월 12 00:56:51 KST 2025][정보] App successfully installed in simulator device: null
+[화 8월 12 00:56:51 KST 2025][미세] Checking execution permissions for /Users/bagjun-won/Graal/graalvm-svm-java17-darwin-gluon-22.1.0.1-Final
+[화 8월 12 00:56:51 KST 2025][미세] PB Command for check xattr: xattr /Users/bagjun-won/Graal/graalvm-svm-java17-darwin-gluon-22.1.0.1-Final
+[화 8월 12 00:56:51 KST 2025][미세] Start process check xattr...
+[화 8월 12 00:56:51 KST 2025][미세] [SUB] com.apple.provenance
+[화 8월 12 00:56:51 KST 2025][미세] Result for check xattr: 0
+[화 8월 12 00:56:51 KST 2025][미세] PB Command for check version: /Users/bagjun-won/Graal/graalvm-svm-java17-darwin-gluon-22.1.0.1-Final/Contents/Home/bin/java -version
+[화 8월 12 00:56:51 KST 2025][미세] Start process check version...
+[화 8월 12 00:56:52 KST 2025][미세] [SUB] openjdk version "17.0.3" 2022-04-19
+[화 8월 12 00:56:52 KST 2025][미세] [SUB] OpenJDK Runtime Environment GraalVM 22.1.0.1 (build 17.0.3+7-jvmci-22.1-b06)
+[화 8월 12 00:56:52 KST 2025][미세] [SUB] OpenJDK 64-Bit Server VM GraalVM 22.1.0.1 (build 17.0.3+7-jvmci-22.1-b06, mixed mode, sharing)
+[화 8월 12 00:56:52 KST 2025][미세] Result for check version: 0

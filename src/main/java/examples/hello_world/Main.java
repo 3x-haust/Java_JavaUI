@@ -1,5 +1,6 @@
 package examples.hello_world;
 
+import io.github._3xhaust.core.Launcher;
 import io.github._3xhaust.core.View;
 import io.github._3xhaust.dsl.enums.CrossAxisAlignment;
 import io.github._3xhaust.dsl.enums.MainAxisAlignment;
@@ -25,6 +26,6 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        FXApp.main(args);
+        Launcher.launch(args, Main::MyApp, "MyApp", 640, 480);
     }
 }

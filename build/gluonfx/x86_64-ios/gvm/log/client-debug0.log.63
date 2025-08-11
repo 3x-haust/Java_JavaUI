@@ -1,0 +1,109 @@
+[화 8월 12 00:56:52 KST 2025][정보] ==================== RUN TASK ====================
+[화 8월 12 00:56:52 KST 2025][미세] Got Bundle ID = io.github._3xhaust.javaUI
+[화 8월 12 00:56:52 KST 2025][미세] Preparing SimDevice:  null
+[화 8월 12 00:56:52 KST 2025][미세] PB Command for sim: xcrun simctl list devices
+[화 8월 12 00:56:52 KST 2025][미세] Start process sim...
+[화 8월 12 00:56:52 KST 2025][미세] [SUB] == Devices ==
+[화 8월 12 00:56:52 KST 2025][미세] [SUB] -- iOS 18.3 --
+[화 8월 12 00:56:52 KST 2025][미세] [SUB]     iPhone 16 Pro (58380AFD-CE50-4F0C-92EB-B813EC55C75A) (Shutdown) 
+[화 8월 12 00:56:52 KST 2025][미세] [SUB]     iPhone 16 Pro Max (E918F846-26E2-4126-84C8-E89BD190127A) (Shutdown) 
+[화 8월 12 00:56:52 KST 2025][미세] [SUB]     iPhone 16 (AA154698-C42F-44A0-B02C-B9A9FB9CFC91) (Booted) 
+[화 8월 12 00:56:52 KST 2025][미세] [SUB]     iPhone 16 Plus (4755043E-97B5-454B-BB23-508B38911572) (Shutdown) 
+[화 8월 12 00:56:52 KST 2025][미세] [SUB]     iPhone SE (3rd generation) (AE520129-4DE8-4BFF-A272-56A21B4D7284) (Shutdown) 
+[화 8월 12 00:56:52 KST 2025][미세] [SUB]     iPad Pro 11-inch (M4) (49EEB186-470C-41B4-B03A-78D8B33BB6FE) (Shutdown) 
+[화 8월 12 00:56:52 KST 2025][미세] [SUB]     iPad Pro 13-inch (M4) (D8EEEC16-D609-49B4-81F9-8728EA95487F) (Shutdown) 
+[화 8월 12 00:56:52 KST 2025][미세] [SUB]     iPad Air 11-inch (M2) (31355430-1ECC-495A-9B33-3F556F3F2958) (Shutdown) 
+[화 8월 12 00:56:52 KST 2025][미세] [SUB]     iPad Air 13-inch (M2) (64E44DCA-3E89-45DE-A877-AC0D5D4F08A5) (Shutdown) 
+[화 8월 12 00:56:52 KST 2025][미세] [SUB]     iPad mini (A17 Pro) (76333F09-FC0B-43B3-AE28-31008E984EF9) (Shutdown) 
+[화 8월 12 00:56:52 KST 2025][미세] [SUB]     iPad (10th generation) (5D422660-8B15-453B-97C2-09C207B267DA) (Shutdown) 
+[화 8월 12 00:56:52 KST 2025][미세] Result for sim: 0
+[화 8월 12 00:56:52 KST 2025][미세] Number of simulator devices found: 11
+[화 8월 12 00:56:52 KST 2025][미세] List of simulator devices found: 11
+SimDevice{name='iPhone 16 Pro', id='58380AFD-CE50-4F0C-92EB-B813EC55C75A', state='(Shutdown)'}
+SimDevice{name='iPhone 16 Pro Max', id='E918F846-26E2-4126-84C8-E89BD190127A', state='(Shutdown)'}
+SimDevice{name='iPhone 16', id='AA154698-C42F-44A0-B02C-B9A9FB9CFC91', state='(Booted)'}
+SimDevice{name='iPhone 16 Plus', id='4755043E-97B5-454B-BB23-508B38911572', state='(Shutdown)'}
+SimDevice{name='iPhone SE (3rd generation)', id='AE520129-4DE8-4BFF-A272-56A21B4D7284', state='(Shutdown)'}
+SimDevice{name='iPad Pro 11-inch (M4)', id='49EEB186-470C-41B4-B03A-78D8B33BB6FE', state='(Shutdown)'}
+SimDevice{name='iPad Pro 13-inch (M4)', id='D8EEEC16-D609-49B4-81F9-8728EA95487F', state='(Shutdown)'}
+SimDevice{name='iPad Air 11-inch (M2)', id='31355430-1ECC-495A-9B33-3F556F3F2958', state='(Shutdown)'}
+SimDevice{name='iPad Air 13-inch (M2)', id='64E44DCA-3E89-45DE-A877-AC0D5D4F08A5', state='(Shutdown)'}
+SimDevice{name='iPad mini (A17 Pro)', id='76333F09-FC0B-43B3-AE28-31008E984EF9', state='(Shutdown)'}
+SimDevice{name='iPad (10th generation)', id='5D422660-8B15-453B-97C2-09C207B267DA', state='(Shutdown)'}
+[화 8월 12 00:56:52 KST 2025][미세] Found SimDevice: SimDevice{name='iPhone 16', id='AA154698-C42F-44A0-B02C-B9A9FB9CFC91', state='(Booted)'}
+[화 8월 12 00:56:52 KST 2025][미세] PB Command for get installed apps: /bin/sh -c xcrun simctl listapps booted | plutil -convert json - -o - | ruby -r json -e 'puts JSON.parse(STDIN.read).keys'
+[화 8월 12 00:56:52 KST 2025][미세] Start process get installed apps...
+[화 8월 12 00:56:52 KST 2025][정보] [SUB] io.github._3xhaust.javaUI: 29813
+[화 8월 12 00:56:52 KST 2025][미세] [SUB] com.apple.Passbook
+[화 8월 12 00:56:52 KST 2025][미세] [SUB] com.apple.MobileAddressBook
+[화 8월 12 00:56:52 KST 2025][미세] [SUB] com.apple.Fitness
+[화 8월 12 00:56:52 KST 2025][미세] [SUB] com.apple.DocumentsApp
+[화 8월 12 00:56:52 KST 2025][미세] [SUB] io.github._3xhaust.JavaUIiOS
+[화 8월 12 00:56:52 KST 2025][미세] [SUB] io.github.a3xhaust.ecostep
+[화 8월 12 00:56:52 KST 2025][미세] [SUB] com.apple.MobileSMS
+[화 8월 12 00:56:52 KST 2025][미세] [SUB] com.example.lukeApp
+[화 8월 12 00:56:52 KST 2025][미세] [SUB] com.apple.Maps
+[화 8월 12 00:56:52 KST 2025][미세] [SUB] com.apple.Passwords
+[화 8월 12 00:56:52 KST 2025][미세] [SUB] com.apple.mobilecal
+[화 8월 12 00:56:52 KST 2025][미세] [SUB] com.apple.Bridge
+[화 8월 12 00:56:52 KST 2025][미세] [SUB] com.example.ecoStep
+[화 8월 12 00:56:52 KST 2025][미세] [SUB] com.apple.Preferences
+[화 8월 12 00:56:52 KST 2025][미세] [SUB] com.luke.app
+[화 8월 12 00:56:52 KST 2025][미세] [SUB] com.example.example
+[화 8월 12 00:56:52 KST 2025][미세] [SUB] io.github._3xhaust.javaUI
+[화 8월 12 00:56:52 KST 2025][미세] [SUB] com.apple.reminders
+[화 8월 12 00:56:52 KST 2025][미세] [SUB] host.exp.Exponent
+[화 8월 12 00:56:52 KST 2025][미세] [SUB] com.apple.Health
+[화 8월 12 00:56:52 KST 2025][미세] [SUB] com.apple.news
+[화 8월 12 00:56:52 KST 2025][미세] [SUB] com.apple.webapp
+[화 8월 12 00:56:52 KST 2025][미세] [SUB] com.apple.PreviewShell
+[화 8월 12 00:56:52 KST 2025][미세] [SUB] com.apple.mobilesafari
+[화 8월 12 00:56:52 KST 2025][미세] [SUB] com.apple.mobileslideshow
+[화 8월 12 00:56:52 KST 2025][미세] [SUB] com.apple.shortcuts
+[화 8월 12 00:56:52 KST 2025][미세] Result for get installed apps: 0
+[화 8월 12 00:56:52 KST 2025][미세] PB Command for open sim: open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/ --args -CurrentDeviceUDID AA154698-C42F-44A0-B02C-B9A9FB9CFC91
+[화 8월 12 00:56:52 KST 2025][미세] Start process open sim...
+[화 8월 12 00:56:52 KST 2025][미세] Result for open sim: 0
+[화 8월 12 00:56:52 KST 2025][정보] Launching app on SimDevice...
+[화 8월 12 00:56:52 KST 2025][미세] PB Command for launch: xcrun simctl launch --console-pty AA154698-C42F-44A0-B02C-B9A9FB9CFC91 io.github._3xhaust.javaUI
+[화 8월 12 00:56:52 KST 2025][미세] Start process launch...
+[화 8월 12 00:56:54 KST 2025][정보] [SUB] 2025-08-12 00:56:54.392 javaUI[32183:1971320] Done creating user.home at /Users/bagjun-won/Library/Developer/CoreSimulator/Devices/AA154698-C42F-44A0-B02C-B9A9FB9CFC91/data/Containers/Data/Application/F2841303-394D-43D0-91EC-10BBB198C7CF/Library/gluon
+[화 8월 12 00:56:54 KST 2025][정보] [SUB] 
+[화 8월 12 00:56:54 KST 2025][정보] [SUB] 
+[화 8월 12 00:56:54 KST 2025][정보] [SUB] 
+[화 8월 12 00:56:54 KST 2025][정보] [SUB] determineCpuFeaures
+[화 8월 12 00:56:54 KST 2025][정보] [SUB] 
+[화 8월 12 00:56:54 KST 2025][정보] [SUB] 
+[화 8월 12 00:56:54 KST 2025][정보] [SUB] 
+[화 8월 12 00:56:54 KST 2025][정보] [SUB] determineCpuFeaures
+[화 8월 12 00:56:54 KST 2025][정보] [SUB] [Launcher] os.name=iOS, env JAVAUI_PLATFORM=null, prop javaui.platform=null, selected=JAVAFX
+[화 8월 12 00:56:54 KST 2025][정보] [SUB] 8월 12, 2025 12:56:54 오전 com.sun.javafx.application.PlatformImpl startup
+[화 8월 12 00:56:54 KST 2025][정보] [SUB] WARNING: Unsupported JavaFX configuration: classes were loaded from 'unnamed module @4563e9ab'
+[화 8월 12 00:56:54 KST 2025][정보] [SUB] IOSWindowSystemInterface : share 0 view 0 pf otready 
+[화 8월 12 00:56:54 KST 2025][정보] [SUB] GL_VERSION string = OpenGL ES 2.0 APPLE-21.0.27
+[화 8월 12 00:56:54 KST 2025][정보] [SUB] GL_VERSION (major.minor) = 0.0
+[화 8월 12 00:56:54 KST 2025][정보] [SUB]   initialize() returns 140397801141984
+[화 8월 12 00:56:54 KST 2025][정보] [SUB] IOSWindowSystemInterface : share 1aac320 view 0 pf otready 
+[화 8월 12 00:56:54 KST 2025][정보] [SUB] GL_VERSION string = OpenGL ES 2.0 APPLE-21.0.27
+[화 8월 12 00:56:54 KST 2025][정보] [SUB] GL_VERSION (major.minor) = 0.0
+[화 8월 12 00:56:54 KST 2025][정보] [SUB] CTXINFO vendor
+[화 8월 12 00:56:54 KST 2025][정보] [SUB] CTXINFO renderer
+[화 8월 12 00:56:54 KST 2025][정보] [SUB] CTXINFO glExtensions
+[화 8월 12 00:56:54 KST 2025][정보] [SUB] CTXINFO GL_ARB_pixel_buffer_object
+[화 8월 12 00:56:54 KST 2025][정보] [SUB] CTXINFO allocate the structure
+[화 8월 12 00:56:54 KST 2025][정보] [SUB] CTXINFO set function pointers
+[화 8월 12 00:56:54 KST 2025][정보] [SUB] IOSWindowSystemInterface : share 1aac320 view 0 pf otready 
+[화 8월 12 00:56:54 KST 2025][정보] [SUB] GL_VERSION string = OpenGL ES 2.0 APPLE-21.0.27
+[화 8월 12 00:56:54 KST 2025][정보] [SUB] GL_VERSION (major.minor) = 0.0
+[화 8월 12 00:56:54 KST 2025][정보] [SUB] CTXINFO vendor
+[화 8월 12 00:56:54 KST 2025][정보] [SUB] CTXINFO renderer
+[화 8월 12 00:56:54 KST 2025][정보] [SUB] CTXINFO glExtensions
+[화 8월 12 00:56:54 KST 2025][정보] [SUB] CTXINFO GL_ARB_pixel_buffer_object
+[화 8월 12 00:56:54 KST 2025][정보] [SUB] CTXINFO allocate the structure
+[화 8월 12 00:56:54 KST 2025][정보] [SUB] CTXINFO set function pointers
+[화 8월 12 00:56:54 KST 2025][정보] [SUB] [FXBootstrap] start() called. Stage=javafx.stage.Stage@56649613
+[화 8월 12 00:56:54 KST 2025][정보] [SUB] [FXBootstrap] init renderer title=MyApp, size=640x480
+[화 8월 12 00:56:55 KST 2025][정보] [SUB] [JavaFXRenderer] init done. stageShown=true
+[화 8월 12 00:56:55 KST 2025][정보] [SUB] [FXBootstrap] mounting view=io.github._3xhaust.dsl.Layouts$ColumnWidget@51a86d4d
+[화 8월 12 00:56:55 KST 2025][정보] [SUB] [JavaFXRenderer] rendering root view: io.github._3xhaust.dsl.Layouts$ColumnWidget@51a86d4d
+[화 8월 12 01:11:02 KST 2025][정보] [SUB] io.github._3xhaust.javaUI: 32183

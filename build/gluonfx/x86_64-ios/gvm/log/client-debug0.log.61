@@ -1,0 +1,188 @@
+[화 8월 12 00:56:39 KST 2025][정보] ==================== PACKAGE TASK ====================
+[화 8월 12 00:56:39 KST 2025][정보] Building .app bundle at: /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/javaUI.app
+[화 8월 12 00:56:39 KST 2025][미세] platform info file at /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Info.plist
+[화 8월 12 00:56:39 KST 2025][미세] Copy Default-Info.plist to /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/gensrc/ios/Default-Info.plist
+[화 8월 12 00:56:39 KST 2025][미세] Looking for resource: /native/ios/Default-Info.plist
+[화 8월 12 00:56:39 KST 2025][정보] Default iOS plist generated in /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/gensrc/ios/Default-Info.plist.
+Consider copying it to /Users/bagjun-won/Java_JavaUI/src/ios before performing any modification
+[화 8월 12 00:56:39 KST 2025][미세] Looking for resource: /native/ios/assets/Default-375w-667h@2x~iphone.png
+[화 8월 12 00:56:39 KST 2025][미세] Looking for resource: /native/ios/assets/Default-414w-736h@3x~iphone.png
+[화 8월 12 00:56:39 KST 2025][미세] Looking for resource: /native/ios/assets/Default-portrait@2x~ipad.png
+[화 8월 12 00:56:39 KST 2025][미세] Looking for resource: /native/ios/assets/Default-375w-812h-landscape@3x~iphone.png
+[화 8월 12 00:56:39 KST 2025][미세] Looking for resource: /native/ios/assets/Default-568h@2x~iphone.png
+[화 8월 12 00:56:39 KST 2025][미세] Looking for resource: /native/ios/assets/Default-portrait~ipad.png
+[화 8월 12 00:56:39 KST 2025][미세] Looking for resource: /native/ios/assets/Default-375w-812h@3x~iphone.png
+[화 8월 12 00:56:39 KST 2025][미세] Looking for resource: /native/ios/assets/Default-landscape@2x~ipad.png
+[화 8월 12 00:56:39 KST 2025][미세] Looking for resource: /native/ios/assets/Default@2x~iphone.png
+[화 8월 12 00:56:39 KST 2025][미세] Looking for resource: /native/ios/assets/Default-414w-736h-landscape@3x~iphone.png
+[화 8월 12 00:56:39 KST 2025][미세] Looking for resource: /native/ios/assets/Default-414w-896h@3x~iphone.png
+[화 8월 12 00:56:39 KST 2025][미세] Looking for resource: /native/ios/assets/Default-414w-896h-landscape@3x~iphone.png
+[화 8월 12 00:56:39 KST 2025][미세] Looking for resource: /native/ios/assets/Default-landscape~ipad.png
+[화 8월 12 00:56:39 KST 2025][미세] Looking for resource: /native/ios/assets/iTunesArtwork
+[화 8월 12 00:56:39 KST 2025][미세] Looking for resource: /native/ios/assets/iTunesArtwork@2x
+[화 8월 12 00:56:39 KST 2025][미세] Looking for resource: /native/ios/assets/Assets.xcassets/AppIcon.appiconset/Contents.json
+[화 8월 12 00:56:39 KST 2025][미세] Looking for resource: /native/ios/assets/Assets.xcassets/AppIcon.appiconset/Gluon-app-store-icon-1024@1x.png
+[화 8월 12 00:56:39 KST 2025][미세] Looking for resource: /native/ios/assets/Assets.xcassets/AppIcon.appiconset/Gluon-ipad-app-icon-76@1x.png
+[화 8월 12 00:56:39 KST 2025][미세] Looking for resource: /native/ios/assets/Assets.xcassets/AppIcon.appiconset/Gluon-ipad-app-icon-76@2x.png
+[화 8월 12 00:56:39 KST 2025][미세] Looking for resource: /native/ios/assets/Assets.xcassets/AppIcon.appiconset/Gluon-ipad-notifications-icon-20@1x.png
+[화 8월 12 00:56:39 KST 2025][미세] Looking for resource: /native/ios/assets/Assets.xcassets/AppIcon.appiconset/Gluon-ipad-notifications-icon-20@2x.png
+[화 8월 12 00:56:39 KST 2025][미세] Looking for resource: /native/ios/assets/Assets.xcassets/AppIcon.appiconset/Gluon-ipad-pro-app-icon-83.5@2x.png
+[화 8월 12 00:56:39 KST 2025][미세] Looking for resource: /native/ios/assets/Assets.xcassets/AppIcon.appiconset/Gluon-ipad-settings-icon-29@1x.png
+[화 8월 12 00:56:39 KST 2025][미세] Looking for resource: /native/ios/assets/Assets.xcassets/AppIcon.appiconset/Gluon-ipad-settings-icon-29@2x.png
+[화 8월 12 00:56:39 KST 2025][미세] Looking for resource: /native/ios/assets/Assets.xcassets/AppIcon.appiconset/Gluon-ipad-spotlight-icon-40@1x.png
+[화 8월 12 00:56:39 KST 2025][미세] Looking for resource: /native/ios/assets/Assets.xcassets/AppIcon.appiconset/Gluon-ipad-spotlight-icon-40@2x.png
+[화 8월 12 00:56:39 KST 2025][미세] Looking for resource: /native/ios/assets/Assets.xcassets/AppIcon.appiconset/Gluon-iphone-app-icon-60@2x.png
+[화 8월 12 00:56:39 KST 2025][미세] Looking for resource: /native/ios/assets/Assets.xcassets/AppIcon.appiconset/Gluon-iphone-app-icon-60@3x.png
+[화 8월 12 00:56:39 KST 2025][미세] Looking for resource: /native/ios/assets/Assets.xcassets/AppIcon.appiconset/Gluon-iphone-notification-icon-20@2x.png
+[화 8월 12 00:56:39 KST 2025][미세] Looking for resource: /native/ios/assets/Assets.xcassets/AppIcon.appiconset/Gluon-iphone-notification-icon-20@3x.png
+[화 8월 12 00:56:39 KST 2025][미세] Looking for resource: /native/ios/assets/Assets.xcassets/AppIcon.appiconset/Gluon-iphone-spotlight-icon-40@2x.png
+[화 8월 12 00:56:39 KST 2025][미세] Looking for resource: /native/ios/assets/Assets.xcassets/AppIcon.appiconset/Gluon-iphone-spotlight-icon-40@3x.png
+[화 8월 12 00:56:39 KST 2025][미세] Looking for resource: /native/ios/assets/Assets.xcassets/AppIcon.appiconset/Gluon-iphone-spotlight-settings-icon-29@2x.png
+[화 8월 12 00:56:39 KST 2025][미세] Looking for resource: /native/ios/assets/Assets.xcassets/AppIcon.appiconset/Gluon-iphone-spotlight-settings-icon-29@3x.png
+[화 8월 12 00:56:39 KST 2025][미세] Looking for resource: /native/ios/assets/Base.lproj/LaunchScreen.storyboard
+[화 8월 12 00:56:39 KST 2025][미세] Looking for resource: /native/ios/assets/Base.lproj/MainScreen.storyboard
+[화 8월 12 00:56:39 KST 2025][미세] Calling verifyStoryBoard for /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/gensrc/ios/assets/Base.lproj/LaunchScreen.storyboard
+[화 8월 12 00:56:39 KST 2025][미세] PB Command for xcrun: xcrun -sdk iphonesimulator -f ibtool
+[화 8월 12 00:56:39 KST 2025][미세] Start process xcrun...
+[화 8월 12 00:56:39 KST 2025][미세] [SUB] /Applications/Xcode.app/Contents/Developer/usr/bin/ibtool
+[화 8월 12 00:56:39 KST 2025][미세] Result for xcrun: 0
+[화 8월 12 00:56:39 KST 2025][미세] PB Command for ibtool: /Applications/Xcode.app/Contents/Developer/usr/bin/ibtool --output-format human-readable-text --output-partial-info-plist /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/gvm/tmp/storyboards/LaunchScreen.storyboard_10402497829994325343.plist --minimum-deployment-target 11.0 --target-device iphone --target-device ipad --compilation-directory /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/gvm/tmp/storyboards/Base.lproj /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/gensrc/ios/assets/Base.lproj/LaunchScreen.storyboard
+[화 8월 12 00:56:39 KST 2025][미세] Start process ibtool...
+[화 8월 12 00:56:41 KST 2025][미세] Result for ibtool: 0
+[화 8월 12 00:56:41 KST 2025][미세] Calling verifyStoryBoard for /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/gensrc/ios/assets/Base.lproj/MainScreen.storyboard
+[화 8월 12 00:56:41 KST 2025][미세] PB Command for xcrun: xcrun -sdk iphonesimulator -f ibtool
+[화 8월 12 00:56:41 KST 2025][미세] Start process xcrun...
+[화 8월 12 00:56:41 KST 2025][미세] [SUB] /Applications/Xcode.app/Contents/Developer/usr/bin/ibtool
+[화 8월 12 00:56:41 KST 2025][미세] Result for xcrun: 0
+[화 8월 12 00:56:41 KST 2025][미세] PB Command for ibtool: /Applications/Xcode.app/Contents/Developer/usr/bin/ibtool --output-format human-readable-text --output-partial-info-plist /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/gvm/tmp/storyboards/MainScreen.storyboard_13854773614255221837.plist --minimum-deployment-target 11.0 --target-device iphone --target-device ipad --compilation-directory /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/gvm/tmp/storyboards/Base.lproj /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/gensrc/ios/assets/Base.lproj/MainScreen.storyboard
+[화 8월 12 00:56:41 KST 2025][미세] Start process ibtool...
+[화 8월 12 00:56:41 KST 2025][미세] Result for ibtool: 0
+[화 8월 12 00:56:41 KST 2025][미세] PB Command for xcrun: xcrun -sdk iphonesimulator -f ibtool
+[화 8월 12 00:56:41 KST 2025][미세] Start process xcrun...
+[화 8월 12 00:56:41 KST 2025][미세] [SUB] /Applications/Xcode.app/Contents/Developer/usr/bin/ibtool
+[화 8월 12 00:56:41 KST 2025][미세] Result for xcrun: 0
+[화 8월 12 00:56:41 KST 2025][미세] PB Command for ibtool: /Applications/Xcode.app/Contents/Developer/usr/bin/ibtool --output-format human-readable-text --minimum-deployment-target 11.0 --target-device iphone --target-device ipad --link /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/javaUI.app /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/gvm/tmp/storyboards/Base.lproj/LaunchScreen.storyboardc /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/gvm/tmp/storyboards/Base.lproj/MainScreen.storyboardc
+[화 8월 12 00:56:41 KST 2025][미세] Start process ibtool...
+[화 8월 12 00:56:41 KST 2025][미세] Result for ibtool: 0
+[화 8월 12 00:56:41 KST 2025][미세] Looking for resource: /native/ios/assets/Assets.xcassets/Contents.json
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/gensrc/ios/assets/Default-414w-736h@3x~iphone.png to /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/javaUI.app/Default-414w-736h@3x~iphone.png
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/gensrc/ios/assets/iTunesArtwork to /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/javaUI.app/iTunesArtwork
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/gensrc/ios/assets/Default-568h@2x~iphone.png to /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/javaUI.app/Default-568h@2x~iphone.png
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/gensrc/ios/assets/Default-414w-736h-landscape@3x~iphone.png to /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/javaUI.app/Default-414w-736h-landscape@3x~iphone.png
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/gensrc/ios/assets/Default-375w-667h@2x~iphone.png to /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/javaUI.app/Default-375w-667h@2x~iphone.png
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/gensrc/ios/assets/Default-portrait@2x~ipad.png to /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/javaUI.app/Default-portrait@2x~ipad.png
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/gensrc/ios/assets/Default-375w-812h-landscape@3x~iphone.png to /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/javaUI.app/Default-375w-812h-landscape@3x~iphone.png
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/gensrc/ios/assets/Default-landscape~ipad.png to /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/javaUI.app/Default-landscape~ipad.png
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/gensrc/ios/assets/Default-portrait~ipad.png to /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/javaUI.app/Default-portrait~ipad.png
+[화 8월 12 00:56:41 KST 2025][미세] Calling verifyAssetCatalog for /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/gensrc/ios/assets/Assets.xcassets
+[화 8월 12 00:56:41 KST 2025][미세] PB Command for xcrun: xcrun -sdk iphonesimulator -f actool
+[화 8월 12 00:56:41 KST 2025][미세] Start process xcrun...
+[화 8월 12 00:56:41 KST 2025][미세] [SUB] /Applications/Xcode.app/Contents/Developer/usr/bin/actool
+[화 8월 12 00:56:41 KST 2025][미세] Result for xcrun: 0
+[화 8월 12 00:56:41 KST 2025][미세] PB Command for actool: /Applications/Xcode.app/Contents/Developer/usr/bin/actool --output-format human-readable-text --app-icon AppIcon --output-partial-info-plist /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/gvm/tmp/partial-plists/Assets.xcassets_4809511872564395501.plist --platform iphonesimulator --minimum-deployment-target 11.0 --target-device iphone --target-device ipad --compress-pngs --compile /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/javaUI.app /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/gensrc/ios/assets/Assets.xcassets
+[화 8월 12 00:56:41 KST 2025][미세] Start process actool...
+[화 8월 12 00:56:41 KST 2025][미세] [SUB] /* com.apple.actool.compilation-results */
+[화 8월 12 00:56:41 KST 2025][미세] [SUB] /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/gvm/tmp/partial-plists/Assets.xcassets_4809511872564395501.plist
+[화 8월 12 00:56:41 KST 2025][미세] [SUB] /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/javaUI.app/AppIcon60x60@2x.png
+[화 8월 12 00:56:41 KST 2025][미세] [SUB] /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/javaUI.app/AppIcon76x76@2x~ipad.png
+[화 8월 12 00:56:41 KST 2025][미세] [SUB] /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/javaUI.app/Assets.car
+[화 8월 12 00:56:41 KST 2025][미세] [SUB] 
+[화 8월 12 00:56:41 KST 2025][미세] Result for actool: 0
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/gensrc/ios/assets/Default-landscape@2x~ipad.png to /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/javaUI.app/Default-landscape@2x~ipad.png
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/gensrc/ios/assets/Default-375w-812h@3x~iphone.png to /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/javaUI.app/Default-375w-812h@3x~iphone.png
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/gensrc/ios/assets/Default-414w-896h-landscape@3x~iphone.png to /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/javaUI.app/Default-414w-896h-landscape@3x~iphone.png
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/gensrc/ios/assets/Default-414w-896h@3x~iphone.png to /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/javaUI.app/Default-414w-896h@3x~iphone.png
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/gensrc/ios/assets/Default@2x~iphone.png to /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/javaUI.app/Default@2x~iphone.png
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/gensrc/ios/assets/iTunesArtwork@2x to /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/javaUI.app/iTunesArtwork@2x
+[화 8월 12 00:56:41 KST 2025][정보] Default iOS resources generated in /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/gensrc/ios.
+Consider copying them to /Users/bagjun-won/Java_JavaUI/src/ios before performing any modification
+[화 8월 12 00:56:41 KST 2025][미세] Scanning for plist files
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/core/View.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes5531677062028382295/io/github/_3xhaust/core/View.class
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/core/Launcher.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes5531677062028382295/io/github/_3xhaust/core/Launcher.class
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/core/App.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes5531677062028382295/io/github/_3xhaust/core/App.class
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/core/Insets.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes5531677062028382295/io/github/_3xhaust/core/Insets.class
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/core/Launcher$PlatformType.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes5531677062028382295/io/github/_3xhaust/core/Launcher$PlatformType.class
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/core/Renderer.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes5531677062028382295/io/github/_3xhaust/core/Renderer.class
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/platform/javafx/JavaFXRenderer$ContainerContext.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes5531677062028382295/io/github/_3xhaust/platform/javafx/JavaFXRenderer$ContainerContext.class
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/platform/javafx/JavaFXRenderer$1.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes5531677062028382295/io/github/_3xhaust/platform/javafx/JavaFXRenderer$1.class
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/platform/javafx/FXBootstrap.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes5531677062028382295/io/github/_3xhaust/platform/javafx/FXBootstrap.class
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/platform/javafx/JavaFXRenderer.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes5531677062028382295/io/github/_3xhaust/platform/javafx/JavaFXRenderer.class
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/platform/swing/SwingRenderer$2.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes5531677062028382295/io/github/_3xhaust/platform/swing/SwingRenderer$2.class
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/platform/swing/SwingRenderer.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes5531677062028382295/io/github/_3xhaust/platform/swing/SwingRenderer.class
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/platform/swing/SwingRenderer$1.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes5531677062028382295/io/github/_3xhaust/platform/swing/SwingRenderer$1.class
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/platform/swing/SwingRenderer$ContainerContext.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes5531677062028382295/io/github/_3xhaust/platform/swing/SwingRenderer$ContainerContext.class
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/state/State.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes5531677062028382295/io/github/_3xhaust/state/State.class
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/theme/Colors.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes5531677062028382295/io/github/_3xhaust/theme/Colors.class
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/Mod$FontModifier.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes5531677062028382295/io/github/_3xhaust/dsl/Mod$FontModifier.class
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/Widgets$ButtonWidget.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes5531677062028382295/io/github/_3xhaust/dsl/Widgets$ButtonWidget.class
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/Layouts$RowWidget.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes5531677062028382295/io/github/_3xhaust/dsl/Layouts$RowWidget.class
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/Layouts$SizedBoxWidget.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes5531677062028382295/io/github/_3xhaust/dsl/Layouts$SizedBoxWidget.class
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/Layouts$ExpandedWidget.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes5531677062028382295/io/github/_3xhaust/dsl/Layouts$ExpandedWidget.class
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/Layouts$CenterWidget.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes5531677062028382295/io/github/_3xhaust/dsl/Layouts$CenterWidget.class
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/enums/MainAxisSize.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes5531677062028382295/io/github/_3xhaust/dsl/enums/MainAxisSize.class
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/enums/MainAxisAlignment.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes5531677062028382295/io/github/_3xhaust/dsl/enums/MainAxisAlignment.class
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/enums/CrossAxisAlignment.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes5531677062028382295/io/github/_3xhaust/dsl/enums/CrossAxisAlignment.class
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/Mod.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes5531677062028382295/io/github/_3xhaust/dsl/Mod.class
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/Style$Border.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes5531677062028382295/io/github/_3xhaust/dsl/Style$Border.class
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/styles/TextStyle.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes5531677062028382295/io/github/_3xhaust/dsl/styles/TextStyle.class
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/styles/BorderStyle.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes5531677062028382295/io/github/_3xhaust/dsl/styles/BorderStyle.class
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/styles/ButtonStyle.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes5531677062028382295/io/github/_3xhaust/dsl/styles/ButtonStyle.class
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/Widgets$TextWidget.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes5531677062028382295/io/github/_3xhaust/dsl/Widgets$TextWidget.class
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/Style.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes5531677062028382295/io/github/_3xhaust/dsl/Style.class
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/Layouts$ColumnWidget.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes5531677062028382295/io/github/_3xhaust/dsl/Layouts$ColumnWidget.class
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/Widgets.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes5531677062028382295/io/github/_3xhaust/dsl/Widgets.class
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/Layouts.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes5531677062028382295/io/github/_3xhaust/dsl/Layouts.class
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/Layouts$FlexibleWidget.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes5531677062028382295/io/github/_3xhaust/dsl/Layouts$FlexibleWidget.class
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/io/github/_3xhaust/dsl/Widgets$BorderInfo.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes5531677062028382295/io/github/_3xhaust/dsl/Widgets$BorderInfo.class
+[화 8월 12 00:56:41 KST 2025][미세] Copied resource /Users/bagjun-won/Java_JavaUI/build/classes/java/main/examples/hello_world/Main.class to /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes5531677062028382295/examples/hello_world/Main.class
+[화 8월 12 00:56:41 KST 2025][미세] PB Command for jar: /Applications/Android Studio.app/Contents/jbr/Contents/Home/bin/jar cf /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes5531677062028382295/classes.jar -C /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes5531677062028382295 .
+[화 8월 12 00:56:41 KST 2025][미세] Start process jar...
+[화 8월 12 00:56:42 KST 2025][미세] Result for jar: 0
+[화 8월 12 00:56:42 KST 2025][미세] Scanning /Users/bagjun-won/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.38/57f8f5e02e92a30fd21b80cbd426a4172b5f8e29/lombok-1.18.38.jar
+[화 8월 12 00:56:42 KST 2025][미세] Scanning /Users/bagjun-won/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-controls/21.0.3/a1480c6d722ef83a70e3a6718497315bfb74914b/javafx-controls-21.0.3-mac-aarch64.jar
+[화 8월 12 00:56:42 KST 2025][미세] Scanning /Users/bagjun-won/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-graphics/21.0.3/cc4dc214ce1d3fcdb36efc2bbbde6a636d1b8c62/javafx-graphics-21.0.3-mac-aarch64.jar
+[화 8월 12 00:56:42 KST 2025][미세] Scanning /Users/bagjun-won/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-graphics/21.0.3/969380571aa613eb48cd0abdcab8473a8925244c/javafx-graphics-21.0.3.jar
+[화 8월 12 00:56:42 KST 2025][미세] Scanning /Users/bagjun-won/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-base/21.0.3/d3aeec5764138999199a18a36745ea3dc85f7274/javafx-base-21.0.3-mac-aarch64.jar
+[화 8월 12 00:56:42 KST 2025][미세] Scanning /Users/bagjun-won/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-base/21.0.3/a2fd8406d6de23badaf7ef9b18c661788c8c2cc9/javafx-base-21.0.3.jar
+[화 8월 12 00:56:42 KST 2025][미세] Scanning /var/folders/p2/dgbg7zfx0y99jyh5v45ngsj40000gn/T/classes5531677062028382295/classes.jar
+[화 8월 12 00:56:42 KST 2025][미세] Info.plist Entry: CFBundleVersion=1.0
+[화 8월 12 00:56:42 KST 2025][미세] Bundle ID = io.github._3xhaust.javaUI
+[화 8월 12 00:56:42 KST 2025][미세] Info.plist Entry: CFBundleIdentifier=io.github._3xhaust.javaUI
+[화 8월 12 00:56:42 KST 2025][미세] Info.plist Entry: CFBundleShortVersionString=1.0
+[화 8월 12 00:56:42 KST 2025][미세] Info.plist Entry: CFBundleExecutable=javaUI
+[화 8월 12 00:56:42 KST 2025][미세] Info.plist Entry: CFBundleIconName=AppIcon
+[화 8월 12 00:56:42 KST 2025][미세] Info.plist Entry: CFBundleName=javaUI
+[화 8월 12 00:56:42 KST 2025][미세] Info.plist Entry: UILaunchStoryboardName=LaunchScreen
+[화 8월 12 00:56:42 KST 2025][미세] Info.plist Entry: UIMainStoryboardFile=MainScreen
+[화 8월 12 00:56:42 KST 2025][미세] Info.plist Entry: CFBundlePackageType=APPL
+[화 8월 12 00:56:42 KST 2025][미세] Info.plist Entry: LSRequiresIPhoneOS=true
+[화 8월 12 00:56:42 KST 2025][미세] Info.plist Entry: UISupportedInterfaceOrientations=com.dd.plist.NSArray@23a969cf
+[화 8월 12 00:56:42 KST 2025][미세] Info.plist Entry: UISupportedInterfaceOrientations~ipad=com.dd.plist.NSArray@23a969cf
+[화 8월 12 00:56:42 KST 2025][미세] Info.plist Entry: UIRequiredDeviceCapabilities=com.dd.plist.NSArray@58c5ca8
+[화 8월 12 00:56:42 KST 2025][미세] Info.plist Entry: UIDeviceFamily=com.dd.plist.NSArray@b850b6c9
+[화 8월 12 00:56:42 KST 2025][미세] Info.plist Entry: MinimumOSVersion=11.0
+[화 8월 12 00:56:42 KST 2025][미세] Info.plist Entry: UIRequiresFullScreen=YES
+[화 8월 12 00:56:42 KST 2025][미세] Info.plist Entry: DTPlatformName=iphonesimulator
+[화 8월 12 00:56:42 KST 2025][미세] Info.plist Entry: DTSDKName=iphonesimulator18.2
+[화 8월 12 00:56:42 KST 2025][미세] Info.plist Entry: CFBundleSupportedPlatforms=com.dd.plist.NSArray@826c58d
+[화 8월 12 00:56:42 KST 2025][미세] Info.plist Entry: DTPlatformVersion=18.2
+[화 8월 12 00:56:42 KST 2025][미세] Info.plist Entry: DTPlatformBuild=22C146
+[화 8월 12 00:56:42 KST 2025][미세] Info.plist Entry: DTSDKBuild=22C146
+[화 8월 12 00:56:42 KST 2025][미세] Info.plist Entry: DTXcode=1620
+[화 8월 12 00:56:42 KST 2025][미세] Info.plist Entry: DTXcodeBuild=16C5032a
+[화 8월 12 00:56:42 KST 2025][미세] Info.plist Entry: BuildMachineOSBuild=22A380021
+[화 8월 12 00:56:42 KST 2025][미세] Info.plist Entry: CFBundleIcons=com.dd.plist.NSDictionary@87a34280
+[화 8월 12 00:56:42 KST 2025][미세] Info.plist Entry: CFBundleIcons~ipad=com.dd.plist.NSDictionary@f180ef9c
+[화 8월 12 00:56:42 KST 2025][미세] Plist at /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/gensrc/ios/Default-Info.plist
+[화 8월 12 00:56:42 KST 2025][정보] The .app bundle was created successfully at: /Users/bagjun-won/Java_JavaUI/build/gluonfx/x86_64-ios/javaUI.app
+[화 8월 12 00:56:42 KST 2025][미세] Checking execution permissions for /Users/bagjun-won/Graal/graalvm-svm-java17-darwin-gluon-22.1.0.1-Final
+[화 8월 12 00:56:42 KST 2025][미세] PB Command for check xattr: xattr /Users/bagjun-won/Graal/graalvm-svm-java17-darwin-gluon-22.1.0.1-Final
+[화 8월 12 00:56:42 KST 2025][미세] Start process check xattr...
+[화 8월 12 00:56:42 KST 2025][미세] [SUB] com.apple.provenance
+[화 8월 12 00:56:42 KST 2025][미세] Result for check xattr: 0
+[화 8월 12 00:56:42 KST 2025][미세] PB Command for check version: /Users/bagjun-won/Graal/graalvm-svm-java17-darwin-gluon-22.1.0.1-Final/Contents/Home/bin/java -version
+[화 8월 12 00:56:42 KST 2025][미세] Start process check version...
+[화 8월 12 00:56:42 KST 2025][미세] [SUB] openjdk version "17.0.3" 2022-04-19
+[화 8월 12 00:56:42 KST 2025][미세] [SUB] OpenJDK Runtime Environment GraalVM 22.1.0.1 (build 17.0.3+7-jvmci-22.1-b06)
+[화 8월 12 00:56:42 KST 2025][미세] [SUB] OpenJDK 64-Bit Server VM GraalVM 22.1.0.1 (build 17.0.3+7-jvmci-22.1-b06, mixed mode, sharing)
+[화 8월 12 00:56:42 KST 2025][미세] Result for check version: 0

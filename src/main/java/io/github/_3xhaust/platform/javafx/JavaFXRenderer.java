@@ -22,10 +22,12 @@ import java.util.Deque;
 public class JavaFXRenderer implements Renderer {
     private final Stage stage;
     private final Deque<ContainerContext> stack = new ArrayDeque<>();
+    private volatile boolean initialized = false;
+    private volatile View pendingMount = null;
 
     private static class ContainerContext {
         final Pane pane;
-        final String type; // column, row, center, sizedBox
+        final String type;
         final MainAxisAlignment mainAxisAlignment;
         final CrossAxisAlignment crossAxisAlignment;
         final int gap;
@@ -60,6 +62,13 @@ public class JavaFXRenderer implements Renderer {
             stage.show();
             stack.clear();
             stack.push(new ContainerContext(root, "column", MainAxisAlignment.START, CrossAxisAlignment.START, 0));
+            initialized = true;
+            // If mount was requested before init completed
+            if (pendingMount != null) {
+                View toMount = pendingMount;
+                pendingMount = null;
+                doMount(toMount);
+            }
         };
         if (Platform.isFxApplicationThread()) {
             setup.run();
@@ -71,12 +80,20 @@ public class JavaFXRenderer implements Renderer {
     @Override
     public void mount(View root) {
         Platform.runLater(() -> {
-            if (stack.isEmpty()) return;
-            ContainerContext ctx = stack.peek();
-            ctx.pane.getChildren().clear();
-            ctx.firstChild = true;
-            root.render(this);
+            if (!initialized || stack.isEmpty()) {
+                pendingMount = root;
+                return;
+            }
+            doMount(root);
         });
+    }
+
+    private void doMount(View root) {
+        if (stack.isEmpty()) return;
+        ContainerContext ctx = stack.peek();
+        ctx.pane.getChildren().clear();
+        ctx.firstChild = true;
+        root.render(this);
     }
 
     @Override

@@ -46,25 +46,32 @@ test {
 }
 
 application {
-    // 기본 실행 엔트리(JavaFX) - Gluon iOS 빌드에서도 사용됨
-    mainClass = 'examples.hello_world.FXApp'
+    // 공용 런처 진입점 (기본 SWING, 인자/속성으로 플랫폼 선택 가능)
+    mainClass = 'examples.hello_world.Main'
 }
 
 tasks.register('runFx', JavaExec) {
     group = 'application'
     description = 'Run JavaFX example'
     classpath = sourceSets.main.runtimeClasspath
-    mainClass = 'examples.hello_world.FXApp'
+    mainClass = 'examples.hello_world.Main'
     // Use JavaFX modules from runtimeClasspath as module-path
     doFirst {
         jvmArgs '--module-path', configurations.runtimeClasspath.asPath,
                 '--add-modules', 'javafx.controls,javafx.graphics'
+        jvmArgs '-Djavaui.platform=javafx'
     }
 }
 
 gluonfx {
     target = 'ios-sim'
-    mainClassName = 'examples.hello_world.FXApp'
+    mainClassName = 'examples.hello_world.Main'
+    // JavaFX는 iOS 타깃에서 필수이므로 런처가 자동으로 FXBootstrap을 사용하도록 속성 지정
+    // GraalVM native-image가 JavaFX Application 서브클래스(FXBootstrap)의 기본 생성자를 리플렉션으로 호출하므로
+    // 해당 클래스를 리플렉션 화이트리스트에 등록한다.
+    reflectionList = [
+            'io.github._3xhaust.platform.javafx.FXBootstrap'
+    ]
 }
 
 // ---------- iOS Shortcuts ----------
