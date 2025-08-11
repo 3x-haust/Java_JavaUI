@@ -1,3 +1,17 @@
+# Gradle build outputs
+/build/
+/.gradle/
+
+# IDE
+/.idea/
+*.iml
+/.vscode/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
 # Created by https://www.toptal.com/developers/gitignore/api/intellij,java,macos
 # Edit at https://www.toptal.com/developers/gitignore?templates=intellij,java,macos
 
