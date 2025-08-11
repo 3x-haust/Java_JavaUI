@@ -103,13 +103,43 @@ public class Layouts {
 
                 swing.pushContainer(panel);
 
-                for (int i = 0; i < children.size(); i++) {
-                    children.get(i).render(renderer);
+                addMainAxisSpacing(panel, true);
 
-                    if (i < children.size() - 1 && gap > 0) {
-                        panel.add(Box.createVerticalStrut(gap));
+                for (int i = 0; i < children.size(); i++) {
+                    if (crossAxisAlignment != CrossAxisAlignment.STRETCH) {
+                        JPanel wrapper = createCrossAxisWrapper();
+                        swing.pushContainer(wrapper);
+                        children.get(i).render(renderer);
+                        swing.popContainer();
+
+                        // crossAxisAlignment에 따라 추가 glue 처리
+                        switch (crossAxisAlignment) {
+                            case START -> {
+                                // START: 왼쪽 정렬이므로 오른쪽에 glue 추가
+                                wrapper.add(Box.createHorizontalGlue());
+                            }
+                            case CENTER -> {
+                                wrapper.add(Box.createHorizontalGlue());
+                            }
+                            case END -> {
+                                // END: 오른쪽 정렬이므로 이미 createCrossAxisWrapper에서 처리됨
+                            }
+                        }
+
+                        panel.add(wrapper);
+                    } else {
+                        children.get(i).render(renderer);
+                    }
+
+                    if (i < children.size() - 1) {
+                        if (gap > 0) {
+                            panel.add(Box.createVerticalStrut(gap));
+                        }
+                        addMainAxisSpacing(panel, false);
                     }
                 }
+
+                addMainAxisSpacing(panel, true);
 
                 swing.popContainer();
                 swing.addComponent(panel);
@@ -120,14 +150,50 @@ public class Layouts {
             JPanel panel = new JPanel();
             panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
 
+            return panel;
+        }
+
+        private void addMainAxisSpacing(JPanel panel, boolean isEdge) {
+            switch (mainAxisAlignment) {
+                case CENTER -> {
+                    if (isEdge) panel.add(Box.createVerticalGlue());
+                }
+                case END -> {
+                    if (isEdge && panel.getComponentCount() == 0) {
+                        panel.add(Box.createVerticalGlue());
+                    }
+                }
+                case SPACE_BETWEEN -> {
+                    if (!isEdge && panel.getComponentCount() > 0) {
+                        panel.add(Box.createVerticalGlue());
+                    }
+                }
+                case SPACE_AROUND -> panel.add(Box.createVerticalGlue());
+                case SPACE_EVENLY -> panel.add(Box.createVerticalGlue());
+            }
+        }
+
+        private JPanel createCrossAxisWrapper() {
+            JPanel wrapper = new JPanel();
+            wrapper.setOpaque(false);
+            wrapper.setLayout(new BoxLayout(wrapper, BoxLayout.X_AXIS));
+
             switch (crossAxisAlignment) {
-                case START -> panel.setAlignmentX(Component.LEFT_ALIGNMENT);
-                case END -> panel.setAlignmentX(Component.RIGHT_ALIGNMENT);
-                case CENTER -> panel.setAlignmentX(Component.CENTER_ALIGNMENT);
-                case STRETCH -> panel.setAlignmentX(Component.CENTER_ALIGNMENT);
+                case START -> {
+                    // START의 경우 컴포넌��를 왼쪽에 배치하고 오른쪽에 여백을 추가
+                }
+                case END -> {
+                    wrapper.add(Box.createHorizontalGlue());
+                }
+                case CENTER -> {
+                    wrapper.add(Box.createHorizontalGlue());
+                }
+                default -> {
+                    wrapper.add(Box.createHorizontalGlue());
+                }
             }
 
-            return panel;
+            return wrapper;
         }
     }
 
