@@ -1,25 +1,48 @@
 package io.github._3xhaust.platform.swing;
 
+import io.github._3xhaust.core.Insets;
 import io.github._3xhaust.core.Renderer;
 import io.github._3xhaust.core.View;
+import io.github._3xhaust.dsl.enums.CrossAxisAlignment;
+import io.github._3xhaust.dsl.enums.MainAxisAlignment;
+import io.github._3xhaust.state.State;
 import io.github._3xhaust.theme.Colors;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
-import java.util.List;
-import java.util.Stack;
+import java.util.ArrayDeque;
+import java.util.Deque;
 
 public class SwingRenderer implements Renderer {
     private JFrame frame;
-    private final Stack<Container> containerStack = new Stack<>();
+    private final Deque<ContainerContext> containerStack = new ArrayDeque<>();
+
+    private static class ContainerContext {
+        final JPanel panel;
+        final String type; // column, row, center, sizedBox
+        final MainAxisAlignment mainAxisAlignment;
+        final CrossAxisAlignment crossAxisAlignment;
+        final int gap;
+        boolean firstChild = true;
+
+        ContainerContext(JPanel panel, String type,
+                         MainAxisAlignment mainAxisAlignment,
+                         CrossAxisAlignment crossAxisAlignment,
+                         int gap) {
+            this.panel = panel;
+            this.type = type;
+            this.mainAxisAlignment = mainAxisAlignment;
+            this.crossAxisAlignment = crossAxisAlignment;
+            this.gap = gap;
+        }
+    }
 
     static {
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         } catch (Exception e) {
         }
-
         applyMaterialDesignDefaults();
     }
 
@@ -47,150 +70,232 @@ public class SwingRenderer implements Renderer {
             frame.setSize(width, height);
             frame.setLocationRelativeTo(null);
 
-            JPanel rootPanel = new JPanel();
-            rootPanel.setLayout(new BorderLayout());
+            JPanel rootPanel = new JPanel(new BorderLayout());
             rootPanel.setBackground(Colors.Grey50);
             frame.setContentPane(rootPanel);
             frame.setVisible(true);
 
             containerStack.clear();
-            containerStack.push(rootPanel);
+            // Use CENTER of BorderLayout as root container target
+            JPanel content = new JPanel();
+            content.setOpaque(true);
+            content.setBackground(Colors.Grey50);
+            content.setLayout(new BoxLayout(content, BoxLayout.Y_AXIS));
+            rootPanel.add(content, BorderLayout.CENTER);
+            containerStack.push(new ContainerContext(content, "column",
+                    MainAxisAlignment.START, CrossAxisAlignment.START, 0));
         });
     }
 
     @Override
     public void mount(View root) {
         SwingUtilities.invokeLater(() -> {
-            if (containerStack.isEmpty()) {
-                System.err.println("containerStack is empty!");
-                return;
-            }
-
-            Container rootContainer = containerStack.peek();
-            rootContainer.removeAll();
+            if (containerStack.isEmpty()) return;
+            ContainerContext rootCtx = containerStack.peek();
+            rootCtx.panel.removeAll();
+            rootCtx.firstChild = true;
             root.render(this);
-            rootContainer.revalidate();
-            rootContainer.repaint();
+            rootCtx.panel.revalidate();
+            rootCtx.panel.repaint();
         });
     }
 
     @Override
     public void update(View oldView, View newView) {
+        // TODO: diff/reconcile
     }
 
     @Override
     public void unmount(View view) {
     }
 
-    @Override
-    public void renderContainer(String type, List<View> children) {
-        JPanel panel = createStyledPanel();
+    private JPanel createPanelWithPadding(Insets padding) {
+        JPanel panel = new JPanel();
+        panel.setBackground(Colors.Grey50);
+        if (padding != null) {
+            panel.setBorder(new EmptyBorder(padding.top, padding.left, padding.bottom, padding.right));
+        } else {
+            panel.setBorder(new EmptyBorder(0, 0, 0, 0));
+        }
+        return panel;
+    }
 
+    private void push(JPanel panel, String type,
+                      MainAxisAlignment mainAxisAlignment,
+                      CrossAxisAlignment crossAxisAlignment,
+                      int gap) {
+        // Attach to parent
+        if (!containerStack.isEmpty()) {
+            ContainerContext parent = containerStack.peek();
+            addToParent(parent, panel);
+        }
+        // Configure layout
         switch (type) {
             case "column" -> panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
             case "row" -> panel.setLayout(new BoxLayout(panel, BoxLayout.X_AXIS));
             case "center" -> panel.setLayout(new GridBagLayout());
-            default -> panel.setLayout(new FlowLayout());
+            case "sizedBox" -> panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
         }
-
-        pushContainer(panel);
-
-        if ("center".equals(type)) {
-            GridBagConstraints gbc = new GridBagConstraints();
-            gbc.gridx = 0;
-            gbc.gridy = 0;
-            gbc.anchor = GridBagConstraints.CENTER;
-
-            JPanel childPanel = createStyledPanel();
-            if (children.size() == 1) {
-                pushContainer(childPanel);
-                children.get(0).render(this);
-                popContainer();
-            } else {
-                childPanel.setLayout(new BoxLayout(childPanel, BoxLayout.Y_AXIS));
-                pushContainer(childPanel);
-                for (View child : children) {
-                    child.render(this);
-                }
-                popContainer();
+        ContainerContext ctx = new ContainerContext(panel, type, mainAxisAlignment, crossAxisAlignment, gap);
+        // Leading glue for some alignments
+        if ("column".equals(type)) {
+            if (mainAxisAlignment == MainAxisAlignment.CENTER ||
+                mainAxisAlignment == MainAxisAlignment.END ||
+                mainAxisAlignment == MainAxisAlignment.SPACE_AROUND ||
+                mainAxisAlignment == MainAxisAlignment.SPACE_EVENLY) {
+                panel.add(Box.createVerticalGlue());
             }
-
-            panel.add(childPanel, gbc);
         } else if ("row".equals(type)) {
-            for (int i = 0; i < children.size(); i++) {
-                children.get(i).render(this);
-
-                if (i < children.size() - 1) {
-                    panel.add(Box.createHorizontalStrut(8));
-                }
-            }
-        } else if ("column".equals(type)) {
-            for (int i = 0; i < children.size(); i++) {
-                children.get(i).render(this);
-
-                if (i < children.size() - 1) {
-                    panel.add(Box.createVerticalStrut(8));
-                }
+            if (mainAxisAlignment == MainAxisAlignment.CENTER ||
+                mainAxisAlignment == MainAxisAlignment.END ||
+                mainAxisAlignment == MainAxisAlignment.SPACE_AROUND ||
+                mainAxisAlignment == MainAxisAlignment.SPACE_EVENLY) {
+                panel.add(Box.createHorizontalGlue());
             }
         }
+        containerStack.push(ctx);
+    }
 
-        popContainer();
-
-        Container parent = containerStack.peek();
-
-        if (parent.getLayout() instanceof BorderLayout && "center".equals(type)) {
-            parent.add(panel, BorderLayout.CENTER);
-        } else {
-            parent.add(panel);
+    private void addToParent(ContainerContext parent, JComponent child) {
+        switch (parent.type) {
+            case "center" -> {
+                GridBagConstraints gbc = new GridBagConstraints();
+                gbc.gridx = 0;
+                gbc.gridy = 0;
+                gbc.anchor = GridBagConstraints.CENTER;
+                parent.panel.add(child, gbc);
+            }
+            default -> parent.panel.add(child);
         }
     }
 
     @Override
-    public void pushContainer(Container container) {
-        containerStack.push(container);
+    public void pushColumn(MainAxisAlignment mainAxisAlignment, CrossAxisAlignment crossAxisAlignment, Insets padding, int gap) {
+        JPanel panel = createPanelWithPadding(padding);
+        push(panel, "column", mainAxisAlignment, crossAxisAlignment, gap);
     }
 
     @Override
-    public void popContainer() {
-        containerStack.pop();
+    public void pushRow(MainAxisAlignment mainAxisAlignment, CrossAxisAlignment crossAxisAlignment, Insets padding, int gap) {
+        JPanel panel = createPanelWithPadding(padding);
+        push(panel, "row", mainAxisAlignment, crossAxisAlignment, gap);
     }
 
     @Override
-    public void addComponent(Component comp) {
-        if (!containerStack.isEmpty()) {
-            containerStack.peek().add(comp);
-        } else {
-            System.err.println("Error: No container to add component");
+    public void pushCenter() {
+        JPanel panel = createPanelWithPadding(null);
+        push(panel, "center", MainAxisAlignment.CENTER, CrossAxisAlignment.CENTER, 0);
+    }
+
+    @Override
+    public void pushSizedBox(int width, int height) {
+        JPanel panel = createPanelWithPadding(null);
+        Dimension d = new Dimension(width, height);
+        panel.setPreferredSize(d);
+        panel.setMinimumSize(d);
+        panel.setMaximumSize(d);
+        push(panel, "sizedBox", MainAxisAlignment.START, CrossAxisAlignment.START, 0);
+    }
+
+    @Override
+    public void pop() {
+        if (containerStack.isEmpty()) return;
+        ContainerContext ctx = containerStack.pop();
+        // Trailing glue for alignment
+        if ("column".equals(ctx.type)) {
+            if (ctx.mainAxisAlignment == MainAxisAlignment.CENTER ||
+                ctx.mainAxisAlignment == MainAxisAlignment.SPACE_AROUND ||
+                ctx.mainAxisAlignment == MainAxisAlignment.SPACE_EVENLY) {
+                ctx.panel.add(Box.createVerticalGlue());
+            }
+        } else if ("row".equals(ctx.type)) {
+            if (ctx.mainAxisAlignment == MainAxisAlignment.CENTER ||
+                ctx.mainAxisAlignment == MainAxisAlignment.SPACE_AROUND ||
+                ctx.mainAxisAlignment == MainAxisAlignment.SPACE_EVENLY) {
+                ctx.panel.add(Box.createHorizontalGlue());
+            }
         }
     }
 
-    public JButton button(String text, Runnable onClick) {
-        JButton btn = new JButton(text);
-
-        styleMaterialButton(btn);
-
-        btn.addActionListener(e -> onClick.run());
-        return btn;
+    private void beforeAddChild(ContainerContext ctx) {
+        if (!ctx.firstChild) {
+            if ("column".equals(ctx.type)) {
+                if (ctx.gap > 0) ctx.panel.add(Box.createVerticalStrut(ctx.gap));
+                if (ctx.mainAxisAlignment == MainAxisAlignment.SPACE_BETWEEN ||
+                    ctx.mainAxisAlignment == MainAxisAlignment.SPACE_AROUND ||
+                    ctx.mainAxisAlignment == MainAxisAlignment.SPACE_EVENLY) {
+                    ctx.panel.add(Box.createVerticalGlue());
+                }
+            } else if ("row".equals(ctx.type)) {
+                if (ctx.gap > 0) ctx.panel.add(Box.createHorizontalStrut(ctx.gap));
+                if (ctx.mainAxisAlignment == MainAxisAlignment.SPACE_BETWEEN ||
+                    ctx.mainAxisAlignment == MainAxisAlignment.SPACE_AROUND ||
+                    ctx.mainAxisAlignment == MainAxisAlignment.SPACE_EVENLY) {
+                    ctx.panel.add(Box.createHorizontalGlue());
+                }
+            }
+        }
+        ctx.firstChild = false;
     }
 
-    public JLabel label(String text) {
+    private void applyCrossAlignment(ContainerContext ctx, JComponent comp) {
+        if ("column".equals(ctx.type)) {
+            switch (ctx.crossAxisAlignment) {
+                case START -> comp.setAlignmentX(Component.LEFT_ALIGNMENT);
+                case CENTER -> comp.setAlignmentX(Component.CENTER_ALIGNMENT);
+                case END -> comp.setAlignmentX(Component.RIGHT_ALIGNMENT);
+                case STRETCH -> {
+                    comp.setAlignmentX(Component.CENTER_ALIGNMENT);
+                }
+                default -> comp.setAlignmentX(Component.CENTER_ALIGNMENT);
+            }
+        } else if ("row".equals(ctx.type)) {
+            switch (ctx.crossAxisAlignment) {
+                case START -> comp.setAlignmentY(Component.TOP_ALIGNMENT);
+                case CENTER -> comp.setAlignmentY(Component.CENTER_ALIGNMENT);
+                case END -> comp.setAlignmentY(Component.BOTTOM_ALIGNMENT);
+                case STRETCH -> comp.setAlignmentY(Component.CENTER_ALIGNMENT);
+                default -> comp.setAlignmentY(Component.CENTER_ALIGNMENT);
+            }
+        }
+    }
+
+    @Override
+    public void addText(String text) {
         JLabel label = new JLabel(text);
         styleMaterialLabel(label);
-        return label;
+        if (!containerStack.isEmpty()) {
+            ContainerContext ctx = containerStack.peek();
+            beforeAddChild(ctx);
+            applyCrossAlignment(ctx, label);
+            addToParent(ctx, label);
+        }
     }
 
-    public <T> JLabel label(io.github._3xhaust.state.State<T> state) {
-        JLabel lbl = new JLabel(state.get().toString());
+    @Override
+    public <T> void addText(State<T> state) {
+        JLabel lbl = new JLabel(state.get() != null ? state.get().toString() : "");
         styleMaterialLabel(lbl);
-        state.bindOnChange(newVal -> SwingUtilities.invokeLater(() -> lbl.setText(newVal.toString())));
-        return lbl;
+        state.bindOnChange(newVal -> SwingUtilities.invokeLater(() -> lbl.setText(newVal != null ? newVal.toString() : "")));
+        if (!containerStack.isEmpty()) {
+            ContainerContext ctx = containerStack.peek();
+            beforeAddChild(ctx);
+            applyCrossAlignment(ctx, lbl);
+            addToParent(ctx, lbl);
+        }
     }
 
-    private JPanel createStyledPanel() {
-        JPanel panel = new JPanel();
-        panel.setBackground(Colors.Grey50);
-        panel.setBorder(new EmptyBorder(8, 8, 8, 8));
-        return panel;
+    @Override
+    public void addButton(String text, Runnable onClick) {
+        JButton btn = new JButton(text);
+        styleMaterialButton(btn);
+        btn.addActionListener(e -> onClick.run());
+        if (!containerStack.isEmpty()) {
+            ContainerContext ctx = containerStack.peek();
+            beforeAddChild(ctx);
+            applyCrossAlignment(ctx, btn);
+            addToParent(ctx, btn);
+        }
     }
 
     private void styleMaterialButton(JButton button) {
@@ -200,70 +305,19 @@ public class SwingRenderer implements Renderer {
         button.setFocusPainted(false);
         button.setBorderPainted(false);
         button.setOpaque(true);
-
         button.setBorder(new EmptyBorder(12, 24, 12, 24));
         button.setAlignmentY(Component.CENTER_ALIGNMENT);
         button.setMaximumSize(button.getPreferredSize());
-
         button.addMouseListener(new java.awt.event.MouseAdapter() {
-            @Override
-            public void mouseEntered(java.awt.event.MouseEvent e) {
-                button.setBackground(Colors.Blue600);
-            }
-
-            @Override
-            public void mouseExited(java.awt.event.MouseEvent e) {
-                button.setBackground(Colors.Blue500);
-            }
-
-            @Override
-            public void mousePressed(java.awt.event.MouseEvent e) {
-                button.setBackground(Colors.Blue700);
-            }
-
-            @Override
-            public void mouseReleased(java.awt.event.MouseEvent e) {
-                button.setBackground(Colors.Blue600);
-            }
+            @Override public void mouseEntered(java.awt.event.MouseEvent e) { button.setBackground(Colors.Blue600); }
+            @Override public void mouseExited(java.awt.event.MouseEvent e) { button.setBackground(Colors.Blue500); }
+            @Override public void mousePressed(java.awt.event.MouseEvent e) { button.setBackground(Colors.Blue700); }
+            @Override public void mouseReleased(java.awt.event.MouseEvent e) { button.setBackground(Colors.Blue600); }
         });
     }
 
     private void styleMaterialLabel(JLabel label) {
         label.setForeground(Colors.Grey900);
         label.setFont(new Font("SF Pro Display", Font.PLAIN, 14));
-    }
-
-    public JButton primaryButton(String text, Runnable onClick) {
-        JButton btn = button(text, onClick);
-        btn.setBackground(Colors.Blue500);
-        return btn;
-    }
-
-    public JButton secondaryButton(String text, Runnable onClick) {
-        JButton btn = button(text, onClick);
-        btn.setBackground(Colors.Grey500);
-        btn.setForeground(Colors.White);
-        return btn;
-    }
-
-    public JButton successButton(String text, Runnable onClick) {
-        JButton btn = button(text, onClick);
-        btn.setBackground(Colors.Green500);
-        btn.setForeground(Colors.White);
-        return btn;
-    }
-
-    public JButton dangerButton(String text, Runnable onClick) {
-        JButton btn = button(text, onClick);
-        btn.setBackground(Colors.Red500);
-        btn.setForeground(Colors.White);
-        return btn;
-    }
-
-    public JButton warningButton(String text, Runnable onClick) {
-        JButton btn = button(text, onClick);
-        btn.setBackground(Colors.Orange500);
-        btn.setForeground(Colors.White);
-        return btn;
     }
 }
