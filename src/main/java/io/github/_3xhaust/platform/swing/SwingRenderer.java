@@ -116,16 +116,22 @@ public class SwingRenderer implements Renderer {
             }
 
             panel.add(childPanel, gbc);
-        } else {
+        } else if ("row".equals(type)) {
+            panel.add(Box.createHorizontalGlue());
             for (int i = 0; i < children.size(); i++) {
                 children.get(i).render(this);
 
                 if (i < children.size() - 1) {
-                    if ("row".equals(type)) {
-                        panel.add(Box.createHorizontalStrut(8));
-                    } else if ("column".equals(type)) {
-                        panel.add(Box.createVerticalStrut(8));
-                    }
+                    panel.add(Box.createHorizontalStrut(8));
+                }
+            }
+            panel.add(Box.createHorizontalGlue());
+        } else if ("column".equals(type)) {
+            for (int i = 0; i < children.size(); i++) {
+                children.get(i).render(this);
+
+                if (i < children.size() - 1) {
+                    panel.add(Box.createVerticalStrut(8));
                 }
             }
         }
@@ -198,6 +204,9 @@ public class SwingRenderer implements Renderer {
         button.setOpaque(true);
 
         button.setBorder(new EmptyBorder(12, 24, 12, 24));
+        button.setAlignmentY(Component.CENTER_ALIGNMENT);
+        button.setAlignmentX(Component.CENTER_ALIGNMENT);
+        button.setMaximumSize(button.getPreferredSize());
 
         button.addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
@@ -225,6 +234,8 @@ public class SwingRenderer implements Renderer {
     private void styleMaterialLabel(JLabel label) {
         label.setForeground(Colors.Grey900);
         label.setFont(new Font("SF Pro Display", Font.PLAIN, 14));
+        label.setAlignmentX(Component.CENTER_ALIGNMENT);
+        label.setAlignmentY(Component.CENTER_ALIGNMENT);
     }
 
     public JButton primaryButton(String text, Runnable onClick) {
