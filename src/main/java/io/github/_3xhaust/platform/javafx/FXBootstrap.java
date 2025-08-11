@@ -2,6 +2,7 @@ package io.github._3xhaust.platform.javafx;
 
 import io.github._3xhaust.core.Renderer;
 import io.github._3xhaust.core.View;
+import io.github._3xhaust.platform.android.AndroidRenderer;
 import io.github._3xhaust.platform.ios.IOSRenderer;
 import javafx.application.Application;
 import javafx.stage.Stage;
@@ -32,11 +33,9 @@ public class FXBootstrap extends Application {
     public void start(Stage stage) {
         Renderer renderer;
         String osName = System.getProperty("os.name", "").toLowerCase(Locale.ROOT);
-        if (osName.contains("ios")) {
-            renderer = new IOSRenderer(stage);
-        } else {
-            renderer = new JavaFXRenderer(stage);
-        }
+        if (osName.contains("ios")) renderer = new IOSRenderer(stage);
+        else if (osName.contains("android")) renderer = new AndroidRenderer(stage);
+        else renderer = new JavaFXRenderer(stage);
         renderer.init(appTitle, appWidth, appHeight);
         renderer.mount(appFactory.get());
     }
