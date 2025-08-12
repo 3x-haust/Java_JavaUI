@@ -46,50 +46,117 @@ test {
 }
 
 application {
-    // 기본 실행 엔트리(JavaFX) - Gluon iOS 빌드에서도 사용됨
-    mainClass = 'examples.hello_world.FXApp'
+    // 공용 런처 진입점 (기본 SWING, 인자/속성으로 플랫폼 선택 가능)
+    mainClass = 'examples.hello_world.Main'
 }
 
 tasks.register('runFx', JavaExec) {
     group = 'application'
     description = 'Run JavaFX example'
     classpath = sourceSets.main.runtimeClasspath
-    mainClass = 'examples.hello_world.FXApp'
+    mainClass = 'examples.hello_world.Main'
     // Use JavaFX modules from runtimeClasspath as module-path
     doFirst {
         jvmArgs '--module-path', configurations.runtimeClasspath.asPath,
                 '--add-modules', 'javafx.controls,javafx.graphics'
+        jvmArgs '-Djavaui.platform=javafx'
     }
 }
 
+// -------- Native Engine build & demo --------
+tasks.register('engineBuild', Exec) {
+    group = 'engine'
+    description = 'Build native engine via CMake (outputs build-native/libjui_engine.*)'
+    commandLine 'bash', '-lc', 'cmake -S . -B build-native && cmake --build build-native -j 8'
+}
+
+tasks.register('runEngineDemo', JavaExec) {
+    group = 'engine'
+    description = 'Run IR→Engine demo (requires native engine built)'
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'io.github._3xhaust.core.demo.EngineDemo'
+    dependsOn 'classes'
+    doFirst {
+        def lib = new File(project.projectDir, 'build-native/libjui_engine.dylib')
+        if (!lib.exists()) {
+            logger.lifecycle("Native engine not found. Building it now...")
+        }
+    }
+    jvmArgs "-Djui.engine.lib=${project.projectDir}/build-native/libjui_engine.dylib"
+}
+
+// Allow overriding GluonFX target via -Pgluonfx.target=android (or ios-sim/ios)
+def gfxtarget = project.findProperty('gluonfx.target') ?: 'ios-sim'
+
 gluonfx {
-    target = 'ios-sim'
-    mainClassName = 'examples.hello_world.FXApp'
+    target = gfxtarget
+    mainClassName = 'examples.hello_world.Main'
+    // JavaFX는 iOS 타깃에서 필수이므로 런처가 자동으로 FXBootstrap을 사용하도록 속성 지정
+    // GraalVM native-image가 JavaFX Application 서브클래스(FXBootstrap)의 기본 생성자를 리플렉션으로 호출하므로
+    // 해당 클래스를 리플렉션 화이트리스트에 등록한다.
+    reflectionList = [
+            'io.github._3xhaust.platform.javafx.FXBootstrap'
+    ]
 }
 
 // ---------- iOS Shortcuts ----------
-tasks.register('iosBuild') {
+tasks.register('iosBuild', GradleBuild) {
     group = 'GluonFX'
     description = 'Build iOS native image and package the .app bundle'
-    dependsOn 'nativeBuild', 'nativePackage'
+    tasks = ['nativeBuild', 'nativePackage']
+    startParameter.projectProperties.put('gluonfx.target', 'ios-sim')
 }
 
-tasks.register('iosInstall') {
+// ---------- Android Shortcuts ----------
+// GluonFX는 target을 프로젝트 속성으로도 받을 수 있음: -Pgluonfx.target=android
+// 아래 태스크는 내부적으로 그 속성을 설정하여 실행합니다.
+tasks.register('androidBuild', GradleBuild) {
+    group = 'GluonFX'
+    description = 'Build Android native image and package the .apk/.aab'
+    tasks = ['nativeBuild', 'nativePackage']
+    startParameter.projectProperties.put('gluonfx.target', 'android')
+}
+
+tasks.register('androidInstall', GradleBuild) {
+    group = 'GluonFX'
+    description = 'Install the package on a connected Android device/emulator'
+    tasks = ['nativeInstall']
+    startParameter.projectProperties.put('gluonfx.target', 'android')
+}
+
+tasks.register('androidRun', GradleBuild) {
+    group = 'GluonFX'
+    description = 'Run the app on a connected Android device/emulator'
+    tasks = ['nativeRun']
+    startParameter.projectProperties.put('gluonfx.target', 'android')
+}
+
+tasks.register('android', GradleBuild) {
+    group = 'GluonFX'
+    description = 'One-shot: build + package + install + run on Android'
+    tasks = ['nativeBuild', 'nativePackage', 'nativeInstall', 'nativeRun']
+    startParameter.projectProperties.put('gluonfx.target', 'android')
+}
+
+tasks.register('iosInstall', GradleBuild) {
     group = 'GluonFX'
     description = 'Install the .app bundle to the booted iOS Simulator'
-    dependsOn 'nativeInstall'
+    tasks = ['nativeInstall']
+    startParameter.projectProperties.put('gluonfx.target', 'ios-sim')
 }
 
-tasks.register('iosRun') {
+tasks.register('iosRun', GradleBuild) {
     group = 'GluonFX'
     description = 'Run the app on the booted iOS Simulator'
-    dependsOn 'nativeRun'
+    tasks = ['nativeRun']
+    startParameter.projectProperties.put('gluonfx.target', 'ios-sim')
 }
 
-tasks.register('ios') {
+tasks.register('ios', GradleBuild) {
     group = 'GluonFX'
     description = 'One-shot: build + package + install + run on iOS Simulator'
-    dependsOn 'iosBuild', 'iosInstall', 'iosRun'
+    tasks = ['nativeBuild', 'nativePackage', 'nativeInstall', 'nativeRun']
+    startParameter.projectProperties.put('gluonfx.target', 'ios-sim')
 }
 
 // Optional helpers (no rebuild): fast relaunch/open

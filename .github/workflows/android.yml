@@ -1,0 +1,43 @@
+name: Android (GluonFX)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ feat/ios-javafx ]
+  pull_request:
+    branches: [ feat/ios-javafx ]
+
+jobs:
+  build-android:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup GraalVM (Java 17)
+        uses: graalvm/setup-graalvm@v1
+        with:
+          java-version: '17'
+          distribution: 'graalvm'
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          native-image: true
+
+      - name: Cache Gradle
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+
+      - name: Build Android (GluonFX)
+        run: ./gradlew -Pgluonfx.target=android android --no-daemon --stacktrace --info
+
+      - name: Upload Gluon artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: gluonfx-android-artifacts
+          path: build/gluonfx/**
+          if-no-files-found: warn
+
+
