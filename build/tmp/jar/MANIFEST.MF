@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Implementation-Title: JavaUI
+Implementation-Version: 0.2.0
+Implementation-Vendor: io.github._3xhaust
+Built-By: lyu
+Build-Jdk: 17.0.16
+

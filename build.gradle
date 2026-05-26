@@ -1,26 +1,142 @@
 plugins {
-    id 'java'
+    id 'java-library'
+    id 'maven-publish'
 }
 
 group = 'io.github._3xhaust'
-version = '1.0-SNAPSHOT'
+version = '0.2.0'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+    withSourcesJar()
+    withJavadocJar()
+}
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testImplementation platform('org.junit:junit-bom:5.10.0')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
+    api 'com.formdev:svgSalamander:1.1.4'
 
-    implementation 'org.projectlombok:lombok:1.18.38'
+    compileOnly 'org.projectlombok:lombok:1.18.38'
     annotationProcessor 'org.projectlombok:lombok:1.18.38'
 
-    testImplementation 'org.projectlombok:lombok:1.18.38'
-    testAnnotationProcessor 'org.projectlombok:lombok:1.18.38'
-}
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 
+    testCompileOnly 'org.projectlombok:lombok:1.18.38'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.38'
+
+    // Optional dependency only used by examples/login
+    implementation 'org.postgresql:postgresql:42.7.4'
+}
 
 test {
     useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+    // Avoid HeadlessException in CI by enabling headless mode
+    systemProperty 'java.awt.headless', 'true'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.compilerArgs += ['-Xlint:all', '-Xlint:-serial', '-Xlint:-processing']
+}
+
+tasks.named('jar') {
+    manifest {
+        attributes(
+            'Implementation-Title': 'JavaUI',
+            'Implementation-Version': project.version,
+            'Implementation-Vendor': 'io.github._3xhaust',
+            'Built-By': System.getProperty('user.name'),
+            'Build-Jdk': System.getProperty('java.version')
+        )
+    }
+}
+
+javadoc {
+    options.encoding = 'UTF-8'
+    options.addBooleanOption('Xdoclint:none', true)
+    options.addStringOption('charset', 'UTF-8')
+    failOnError = false
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from components.java
+            pom {
+                name = 'JavaUI'
+                description = 'A declarative, Flutter-inspired UI framework for Java desktop apps (Swing-backed).'
+                url = 'https://github.com/3x-haust/javaUI'
+                licenses {
+                    license {
+                        name = 'MIT License'
+                        url = 'https://opensource.org/licenses/MIT'
+                    }
+                }
+                developers {
+                    developer {
+                        id = '3x-haust'
+                        name = '3x-haust'
+                    }
+                }
+                scm {
+                    connection = 'scm:git:https://github.com/3x-haust/javaUI.git'
+                    developerConnection = 'scm:git:ssh://github.com/3x-haust/javaUI.git'
+                    url = 'https://github.com/3x-haust/javaUI'
+                }
+            }
+        }
+    }
+}
+
+tasks.register('runHello', JavaExec) {
+    group = 'application'
+    description = 'Run the hello_world example'
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'examples.hello_world.Main'
+}
+
+tasks.register('runCounter', JavaExec) {
+    group = 'application'
+    description = 'Run the counter example (auto re-render demo)'
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'examples.counter.Main'
+}
+
+tasks.register('runTodo', JavaExec) {
+    group = 'application'
+    description = 'Run the todo example'
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'examples.todo.Main'
+}
+
+tasks.register('runGallery', JavaExec) {
+    group = 'application'
+    description = 'Run the widget gallery example'
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'examples.gallery.Main'
+}
+
+tasks.register('runSettings', JavaExec) {
+    group = 'application'
+    description = 'Run the settings (theme switching) example'
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'examples.settings.Main'
+}
+
+tasks.register('runLogin', JavaExec) {
+    group = 'application'
+    description = 'Run the login example (PostgreSQL-backed)'
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'examples.login.Main'
+    environment System.getenv()
 }

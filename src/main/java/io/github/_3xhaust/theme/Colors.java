@@ -290,9 +290,12 @@ public class Colors {
 
     public static final Color Grey50 = new Color(250, 250, 250);
     public static final Color Grey100 = new Color(245, 245, 245);
+    public static final Color Grey200 = new Color(238, 238, 238);
     public static final Color Grey300 = new Color(224, 224, 224);
     public static final Color Grey350 = new Color(214, 214, 214);
+    public static final Color Grey400 = new Color(189, 189, 189);
     public static final Color Grey500 = new Color(158, 158, 158);
+    public static final Color Grey600 = new Color(117, 117, 117);
     public static final Color Grey700 = new Color(97, 97, 97);
     public static final Color Grey800 = new Color(66, 66, 66);
     public static final Color Grey850 = new Color(48, 48, 48);

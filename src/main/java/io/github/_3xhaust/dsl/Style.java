@@ -180,6 +180,20 @@ public class Style {
         return this;
     }
 
+    public Style add(Mod mod) {
+        return this;
+    }
+
+    public Style add(Mod.FontModifier fontMod) {
+        if (fontMod.getFamily() != null || fontMod.getSize() > 0 || fontMod.getWeight() > 0) {
+            String family = fontMod.getFamily() != null ? fontMod.getFamily() : Font.SANS_SERIF;
+            int size = fontMod.getSize() > 0 ? fontMod.getSize() : 12;
+            int weight = fontMod.getWeight() > 0 ? fontMod.getWeight() : Font.PLAIN;
+            this.font = new Font(family, weight, size);
+        }
+        return this;
+    }
+
     public Font getFont() { return font; }
     public Color getForegroundColor() { return foregroundColor; }
     public Color getBackgroundColor() { return backgroundColor; }

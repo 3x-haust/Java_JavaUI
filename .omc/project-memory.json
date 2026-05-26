@@ -1,0 +1,386 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1777253734547,
+  "projectRoot": "/Users/lyu/01_Project/06_Java/javaUI",
+  "techStack": {
+    "languages": [
+      {
+        "name": "Java/Kotlin",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "build.gradle"
+        ]
+      }
+    ],
+    "frameworks": [],
+    "packageManager": "gradle",
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": null,
+    "testCommand": null,
+    "lintCommand": null,
+    "devCommand": null,
+    "scripts": {}
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "docs",
+      "src"
+    ],
+    "gitBranches": {
+      "defaultBranch": "main",
+      "branchingStrategy": null
+    }
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "build": {
+      "path": "build",
+      "purpose": "Build output",
+      "fileCount": 0,
+      "lastAccessed": 1777253734531,
+      "keyFiles": []
+    },
+    "docs": {
+      "path": "docs",
+      "purpose": "Documentation",
+      "fileCount": 0,
+      "lastAccessed": 1777253734532,
+      "keyFiles": []
+    },
+    "gradle": {
+      "path": "gradle",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1777253734533,
+      "keyFiles": []
+    },
+    "src": {
+      "path": "src",
+      "purpose": "Source code",
+      "fileCount": 0,
+      "lastAccessed": 1777253734534,
+      "keyFiles": []
+    },
+    "src/test": {
+      "path": "src/test",
+      "purpose": "Test files",
+      "fileCount": 0,
+      "lastAccessed": 1777253734535,
+      "keyFiles": []
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "src/main/java/io/github/_3xhaust/dsl/widgets/ScaffoldWidget.java",
+      "accessCount": 7,
+      "lastAccessed": 1777255199578,
+      "type": "file"
+    },
+    {
+      "path": "src/main/java/io/github/_3xhaust/platform/swing/SwingRenderer.java",
+      "accessCount": 5,
+      "lastAccessed": 1777255227948,
+      "type": "file"
+    },
+    {
+      "path": "src/main/java/io/github/_3xhaust/state/State.java",
+      "accessCount": 4,
+      "lastAccessed": 1777254575209,
+      "type": "file"
+    },
+    {
+      "path": "src/main/java/io/github/_3xhaust/core/Renderer.java",
+      "accessCount": 4,
+      "lastAccessed": 1777254580324,
+      "type": "file"
+    },
+    {
+      "path": "src/main/java/io/github/_3xhaust/core/View.java",
+      "accessCount": 4,
+      "lastAccessed": 1777254581919,
+      "type": "file"
+    },
+    {
+      "path": "src/main/java/io/github/_3xhaust/core/Navigator.java",
+      "accessCount": 4,
+      "lastAccessed": 1777254622652,
+      "type": "file"
+    },
+    {
+      "path": "src/main/java/io/github/_3xhaust/core/JavaUIApp.java",
+      "accessCount": 4,
+      "lastAccessed": 1777254638904,
+      "type": "file"
+    },
+    {
+      "path": "src/main/java/io/github/_3xhaust/dsl/widgets/TextWidget.java",
+      "accessCount": 4,
+      "lastAccessed": 1777255098637,
+      "type": "file"
+    },
+    {
+      "path": "src/main/java/examples/hello_world/Main.java",
+      "accessCount": 4,
+      "lastAccessed": 1777255237786,
+      "type": "file"
+    },
+    {
+      "path": "src/main/java/examples/login/Main.java",
+      "accessCount": 4,
+      "lastAccessed": 1777255415216,
+      "type": "file"
+    },
+    {
+      "path": "src/main/java/io/github/_3xhaust/dsl/AbstractWidget.java",
+      "accessCount": 3,
+      "lastAccessed": 1777254332451,
+      "type": "file"
+    },
+    {
+      "path": "src/main/java/io/github/_3xhaust/dsl/Widget.java",
+      "accessCount": 3,
+      "lastAccessed": 1777254333064,
+      "type": "file"
+    },
+    {
+      "path": "src/main/java/io/github/_3xhaust/dsl/Style.java",
+      "accessCount": 3,
+      "lastAccessed": 1777254334595,
+      "type": "file"
+    },
+    {
+      "path": "src/main/java/io/github/_3xhaust/theme/Colors.java",
+      "accessCount": 3,
+      "lastAccessed": 1777254561095,
+      "type": "file"
+    },
+    {
+      "path": "src/main/java/io/github/_3xhaust/dsl/widgets/RowWidget.java",
+      "accessCount": 3,
+      "lastAccessed": 1777254736317,
+      "type": "file"
+    },
+    {
+      "path": "src/main/java/io/github/_3xhaust/dsl/widgets/ColumnWidget.java",
+      "accessCount": 3,
+      "lastAccessed": 1777254757920,
+      "type": "file"
+    },
+    {
+      "path": "src/main/java/io/github/_3xhaust/dsl/widgets/ExpandedWidget.java",
+      "accessCount": 3,
+      "lastAccessed": 1777254758146,
+      "type": "file"
+    },
+    {
+      "path": "src/main/java/io/github/_3xhaust/dsl/widgets/FlexibleWidget.java",
+      "accessCount": 3,
+      "lastAccessed": 1777254759368,
+      "type": "file"
+    },
+    {
+      "path": "src/main/java/io/github/_3xhaust/dsl/widgets/CenterWidget.java",
+      "accessCount": 3,
+      "lastAccessed": 1777254770334,
+      "type": "file"
+    },
+    {
+      "path": "src/main/java/io/github/_3xhaust/dsl/widgets/SizedBoxWidget.java",
+      "accessCount": 3,
+      "lastAccessed": 1777254771774,
+      "type": "file"
+    },
+    {
+      "path": "src/main/java/io/github/_3xhaust/dsl/widgets/SpacerWidget.java",
+      "accessCount": 3,
+      "lastAccessed": 1777254775174,
+      "type": "file"
+    },
+    {
+      "path": "src/main/java/io/github/_3xhaust/dsl/widgets/ContainerWidget.java",
+      "accessCount": 3,
+      "lastAccessed": 1777254797103,
+      "type": "file"
+    },
+    {
+      "path": "src/main/java/io/github/_3xhaust/dsl/widgets/ButtonWidget.java",
+      "accessCount": 3,
+      "lastAccessed": 1777255076423,
+      "type": "file"
+    },
+    {
+      "path": "src/main/java/io/github/_3xhaust/dsl/widgets/InputWidget.java",
+      "accessCount": 3,
+      "lastAccessed": 1777255091841,
+      "type": "file"
+    },
+    {
+      "path": "src/main/java/io/github/_3xhaust/dsl/widgets/ImageWidget.java",
+      "accessCount": 3,
+      "lastAccessed": 1777255113599,
+      "type": "file"
+    },
+    {
+      "path": "src/main/java/io/github/_3xhaust/dsl/widgets/CardWidget.java",
+      "accessCount": 3,
+      "lastAccessed": 1777255126686,
+      "type": "file"
+    },
+    {
+      "path": "src/main/java/io/github/_3xhaust/dsl/widgets/AppBarWidget.java",
+      "accessCount": 3,
+      "lastAccessed": 1777255139265,
+      "type": "file"
+    },
+    {
+      "path": "settings.gradle",
+      "accessCount": 2,
+      "lastAccessed": 1777254307947,
+      "type": "file"
+    },
+    {
+      "path": "src/main/java/io/github/_3xhaust/dsl/ContainerWidget.java",
+      "accessCount": 2,
+      "lastAccessed": 1777254333465,
+      "type": "file"
+    },
+    {
+      "path": "src/main/java/io/github/_3xhaust/dsl/EdgeInsets.java",
+      "accessCount": 2,
+      "lastAccessed": 1777254335229,
+      "type": "file"
+    },
+    {
+      "path": "src/main/java/io/github/_3xhaust/dsl/widgets/ListViewWidget.java",
+      "accessCount": 2,
+      "lastAccessed": 1777254352519,
+      "type": "file"
+    },
+    {
+      "path": "src/main/java/io/github/_3xhaust/dsl/widgets/GridViewWidget.java",
+      "accessCount": 2,
+      "lastAccessed": 1777254352837,
+      "type": "file"
+    },
+    {
+      "path": "src/main/java/io/github/_3xhaust/dsl/widgets/SingleChildScrollViewWidget.java",
+      "accessCount": 2,
+      "lastAccessed": 1777254353647,
+      "type": "file"
+    },
+    {
+      "path": "src/main/java/io/github/_3xhaust/dsl/Mod.java",
+      "accessCount": 2,
+      "lastAccessed": 1777254354375,
+      "type": "file"
+    },
+    {
+      "path": "src/main/java/io/github/_3xhaust/dsl/styles/ButtonStyle.java",
+      "accessCount": 2,
+      "lastAccessed": 1777254359370,
+      "type": "file"
+    },
+    {
+      "path": "src/main/java/io/github/_3xhaust/dsl/styles/TextStyle.java",
+      "accessCount": 2,
+      "lastAccessed": 1777254360297,
+      "type": "file"
+    },
+    {
+      "path": "src/main/java/io/github/_3xhaust/dsl/styles/BorderStyle.java",
+      "accessCount": 2,
+      "lastAccessed": 1777254360562,
+      "type": "file"
+    },
+    {
+      "path": "src/main/java/io/github/_3xhaust/dsl/enums/MainAxisAlignment.java",
+      "accessCount": 2,
+      "lastAccessed": 1777254361332,
+      "type": "file"
+    },
+    {
+      "path": "src/main/java/io/github/_3xhaust/dsl/enums/CrossAxisAlignment.java",
+      "accessCount": 2,
+      "lastAccessed": 1777254362262,
+      "type": "file"
+    },
+    {
+      "path": "src/main/java/io/github/_3xhaust/tools/AssetGenerator.java",
+      "accessCount": 2,
+      "lastAccessed": 1777254364424,
+      "type": "file"
+    },
+    {
+      "path": "src/main/java/examples/testapp/Main.java",
+      "accessCount": 1,
+      "lastAccessed": 1777253936813,
+      "type": "file"
+    },
+    {
+      "path": "src/main/java/examples/testapp/Assets.java",
+      "accessCount": 1,
+      "lastAccessed": 1777253976011,
+      "type": "file"
+    },
+    {
+      "path": "LICENSE.txt",
+      "accessCount": 1,
+      "lastAccessed": 1777254003167,
+      "type": "file"
+    },
+    {
+      "path": "src/main/java/io/github/_3xhaust/dsl/BoxDecoration.java",
+      "accessCount": 1,
+      "lastAccessed": 1777254359018,
+      "type": "file"
+    },
+    {
+      "path": "src/main/java/io/github/_3xhaust/dsl/enums/MainAxisSize.java",
+      "accessCount": 1,
+      "lastAccessed": 1777254362867,
+      "type": "file"
+    },
+    {
+      "path": "src/main/java/io/github/_3xhaust/util/Fonts.java",
+      "accessCount": 1,
+      "lastAccessed": 1777254477227,
+      "type": "file"
+    },
+    {
+      "path": "src/main/java/io/github/_3xhaust/util/Logger.java",
+      "accessCount": 1,
+      "lastAccessed": 1777254485507,
+      "type": "file"
+    },
+    {
+      "path": "src/main/java/io/github/_3xhaust/util/ImageLoader.java",
+      "accessCount": 1,
+      "lastAccessed": 1777254500224,
+      "type": "file"
+    },
+    {
+      "path": "src/main/java/io/github/_3xhaust/theme/ColorUtils.java",
+      "accessCount": 1,
+      "lastAccessed": 1777254513677,
+      "type": "file"
+    },
+    {
+      "path": "src/main/java/io/github/_3xhaust/theme/ThemeMode.java",
+      "accessCount": 1,
+      "lastAccessed": 1777254514291,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}

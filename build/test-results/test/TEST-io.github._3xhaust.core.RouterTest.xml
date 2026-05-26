@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="io.github._3xhaust.core.RouterTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-04-27T02:04:14.263Z" hostname="Lyusungyuns-MacBook-Air.local" time="0.02">
+  <properties/>
+  <testcase name="guardCanBlockNavigation()" classname="io.github._3xhaust.core.RouterTest" time="0.011"/>
+  <testcase name="historyStackBackForward()" classname="io.github._3xhaust.core.RouterTest" time="0.003"/>
+  <testcase name="pathParamCaptured()" classname="io.github._3xhaust.core.RouterTest" time="0.0"/>
+  <testcase name="exactMatchResolves()" classname="io.github._3xhaust.core.RouterTest" time="0.001"/>
+  <testcase name="unknownRouteReturnsNullAndIgnoresBack()" classname="io.github._3xhaust.core.RouterTest" time="0.0"/>
+  <testcase name="onChangeListenerFires()" classname="io.github._3xhaust.core.RouterTest" time="0.001"/>
+  <testcase name="paramIntFallback()" classname="io.github._3xhaust.core.RouterTest" time="0.0"/>
+  <testcase name="wildcardFallback()" classname="io.github._3xhaust.core.RouterTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[[WARNING] io.github._3xhaust.core.Router Route blocked by guard: /secret
+]]></system-err>
+</testsuite>

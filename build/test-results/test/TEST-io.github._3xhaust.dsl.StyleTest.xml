@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="io.github._3xhaust.dsl.StyleTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-04-27T02:04:14.306Z" hostname="Lyusungyuns-MacBook-Air.local" time="0.007">
+  <properties/>
+  <testcase name="paddingAppliesToAllSides()" classname="io.github._3xhaust.dsl.StyleTest" time="0.0"/>
+  <testcase name="widthHeightCombineIntoSize()" classname="io.github._3xhaust.dsl.StyleTest" time="0.0"/>
+  <testcase name="boldDerivesFromExisting()" classname="io.github._3xhaust.dsl.StyleTest" time="0.001"/>
+  <testcase name="fontSizeOnEmptyStyleCreatesSansFont()" classname="io.github._3xhaust.dsl.StyleTest" time="0.0"/>
+  <testcase name="backgroundMakesOpaque()" classname="io.github._3xhaust.dsl.StyleTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

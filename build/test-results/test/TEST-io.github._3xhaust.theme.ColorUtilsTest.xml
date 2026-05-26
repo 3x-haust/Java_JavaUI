@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="io.github._3xhaust.theme.ColorUtilsTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-04-27T02:04:14.321Z" hostname="Lyusungyuns-MacBook-Air.local" time="0.012">
+  <properties/>
+  <testcase name="parsesHex8WithAlpha()" classname="io.github._3xhaust.theme.ColorUtilsTest" time="0.0"/>
+  <testcase name="parsesHex6()" classname="io.github._3xhaust.theme.ColorUtilsTest" time="0.0"/>
+  <testcase name="lightenMovesTowardWhite()" classname="io.github._3xhaust.theme.ColorUtilsTest" time="0.0"/>
+  <testcase name="withAlphaClamps()" classname="io.github._3xhaust.theme.ColorUtilsTest" time="0.0"/>
+  <testcase name="roundTripHex()" classname="io.github._3xhaust.theme.ColorUtilsTest" time="0.0"/>
+  <testcase name="contrastingPicksWhiteForDark()" classname="io.github._3xhaust.theme.ColorUtilsTest" time="0.0"/>
+  <testcase name="invalidHexThrows()" classname="io.github._3xhaust.theme.ColorUtilsTest" time="0.004"/>
+  <testcase name="darkenMovesTowardBlack()" classname="io.github._3xhaust.theme.ColorUtilsTest" time="0.0"/>
+  <testcase name="contrastingPicksBlackForLight()" classname="io.github._3xhaust.theme.ColorUtilsTest" time="0.0"/>
+  <testcase name="parsesShortHex()" classname="io.github._3xhaust.theme.ColorUtilsTest" time="0.004"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

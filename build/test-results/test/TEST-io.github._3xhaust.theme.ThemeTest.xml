@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="io.github._3xhaust.theme.ThemeTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-04-27T02:04:14.334Z" hostname="Lyusungyuns-MacBook-Air.local" time="0.428">
+  <properties/>
+  <testcase name="lightThemeIsNotDark()" classname="io.github._3xhaust.theme.ThemeTest" time="0.426"/>
+  <testcase name="subscribersFireOnSet()" classname="io.github._3xhaust.theme.ThemeTest" time="0.001"/>
+  <testcase name="builderPropagatesValues()" classname="io.github._3xhaust.theme.ThemeTest" time="0.0"/>
+  <testcase name="toggleSwitches()" classname="io.github._3xhaust.theme.ThemeTest" time="0.0"/>
+  <testcase name="darkThemeIsDark()" classname="io.github._3xhaust.theme.ThemeTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
